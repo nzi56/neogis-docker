@@ -1,0 +1,24 @@
+services:
+  geoserver:
+    image: docker.osgeo.org/geoserver:2.25.2   # official OSGeo registry
+    container_name: geoserver
+    restart: unless-stopped
+    ports:
+      - "8081:8080"                            # http://localhost:8081/geoserver
+    environment:
+      GEOSERVER_ADMIN_USER: admin
+      GEOSERVER_ADMIN_PASSWORD: geoserver
+      # Optional JVM memory tuning (adjust as needed)
+      JAVA_OPTS: "-Xms512m -Xmx2g"
+      # Explicit data dir (the OSGeo image defaults to this anyway)
+      GEOSERVER_DATA_DIR: /opt/geoserver_data
+    volumes:
+      # Persist GeoServer configuration (workspaces, styles, logs, uploads)
+      - ./geoserver_data:/opt/geoserver_data
+      # Optional: mount datasets (shapefiles, GeoTIFFs, etc.)
+      - ./geoserver_datasets:/opt/geoserver_data/external
+    networks:
+      - shared_net      
+networks:
+  shared_net:
+    external: true

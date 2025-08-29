@@ -1,0 +1,17 @@
+<layer>
+  <name>ls_feeder_tr</name>
+  <id>LayerInfoImpl-2ec0d7e8:198c572ae7b:-7ff0</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-1845bceb:198bb769079:-7fec</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-2ec0d7e8:198c572ae7b:-7ff1</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-20 03:51:22.392 UTC</dateCreated>
+  <dateModified>2025-08-26 11:48:06.726 UTC</dateModified>
+</layer>

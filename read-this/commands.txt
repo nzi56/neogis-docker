@@ -1,0 +1,29 @@
+first time run nginx without volume mount
+
+docker exec -it nginx-reverse-proxy /bin/sh
+chmod -R 777 /etc/nginx
+--
+docker cp nginx-reverse-proxy:/etc/nginx/ ./etc_nginx/
+
+# Copy just nginx.conf
+docker cp nginx-reverse-proxy:/etc/nginx/nginx.conf ./etc_nginx/
+
+# Copy the conf.d directory
+docker cp nginx-reverse-proxy:/etc/nginx/conf.d/ ./etc_nginx/
+
+./etc_nginx/ (with slash) - copies contents INTO the directory
+
+./etc_nginx (without slash) - copies as the directory itself
+
+docker cp nginx-reverse-proxy:/etc/nginx ./etc_nginx
+(etc_nginx folder will be created)
+then copy : conf.d folder to ./etc/nginx/conf.d folder
+then remove ./etc_nginx folder
+-----
+host.docker.internal on windows
+172.17.0.1 on Linux
+----
+.\manage_compose.ps1 -Action down
+.\manage_compose.ps1 -Action up
+
+

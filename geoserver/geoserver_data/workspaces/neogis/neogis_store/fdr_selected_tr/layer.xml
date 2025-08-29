@@ -1,0 +1,17 @@
+<layer>
+  <name>fdr_selected_tr</name>
+  <id>LayerInfoImpl--497abb5e:198caf9dbde:-7fc8</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-2332805a:198da066c82:-7f56</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--497abb5e:198caf9dbde:-7fc9</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-21 09:35:51.996 UTC</dateCreated>
+  <dateModified>2025-08-26 11:24:38.659 UTC</dateModified>
+</layer>

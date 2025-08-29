@@ -1,0 +1,17 @@
+<layer>
+  <name>tr_route_to_tr</name>
+  <id>LayerInfoImpl-68a15b7f:198c0a44f64:-7fef</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--489ff6d1:198bd70c159:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-68a15b7f:198c0a44f64:-7ff0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-19 05:21:33.189 UTC</dateCreated>
+  <dateModified>2025-08-26 13:13:34.555 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>cs_tr_consumer_poles</name>
+  <id>LayerInfoImpl-1845bceb:198bb769079:-7ff3</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-1845bceb:198bb769079:-7ff1</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-1845bceb:198bb769079:-7ff4</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-18 10:43:55.74 UTC</dateCreated>
+  <dateModified>2025-08-26 11:06:22.661 UTC</dateModified>
+</layer>

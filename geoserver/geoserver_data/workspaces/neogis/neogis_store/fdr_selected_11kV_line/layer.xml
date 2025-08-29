@@ -1,0 +1,17 @@
+<layer>
+  <name>fdr_selected_11kV_line</name>
+  <id>LayerInfoImpl--497abb5e:198caf9dbde:-7fd7</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-68a15b7f:198c0a44f64:-7ff8</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--497abb5e:198caf9dbde:-7fd8</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-21 09:29:13.304 UTC</dateCreated>
+  <dateModified>2025-08-26 11:19:13.328 UTC</dateModified>
+</layer>

@@ -1,0 +1,24 @@
+services:
+  # Your Spring Boot WebGIS application with volume mapping
+  webgis-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://pg16:5432/neogis
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=mnzryv
+      - JWT_SECRET=JxW8mXbH4rB3vDk2pQyN9aZcLmXhTuFeAgKcRjVpYtWqZpSfUxYhQrGmNtPaCbEk4rB3vDk2pQyN9aZcLmXhTuFeAgKcRjVpYtWqZpSfUxYhQ
+      - JWT_EXPIRATION=3600000
+    volumes:
+      - ./target/webgis.war:/app/webgis.war  # Map the WAR file for easy updates
+      - ./logs:/app/logs  # Map logs directory for persistence
+    networks:
+      - shared_net
+    restart: unless-stopped
+networks:
+  shared_net:
+    external: true

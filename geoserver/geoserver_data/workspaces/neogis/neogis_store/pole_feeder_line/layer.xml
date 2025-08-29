@@ -1,0 +1,17 @@
+<layer>
+  <name>pole_feeder_line</name>
+  <id>LayerInfoImpl-2ec0d7e8:198c572ae7b:-7fd0</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--489ff6d1:198bd70c159:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-2ec0d7e8:198c572ae7b:-7fd1</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-20 04:11:04.418 UTC</dateCreated>
+  <dateModified>2025-08-26 12:56:43.196 UTC</dateModified>
+</layer>

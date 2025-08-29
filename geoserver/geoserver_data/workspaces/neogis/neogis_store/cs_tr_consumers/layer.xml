@@ -1,0 +1,17 @@
+<layer>
+  <name>cs_tr_consumers</name>
+  <id>LayerInfoImpl-7009a7d6:198b31e1393:-7ff8</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--15072316:198c043ff5f:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-7009a7d6:198b31e1393:-7ff9</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-16 13:47:27.343 UTC</dateCreated>
+  <dateModified>2025-08-28 06:55:08.555 UTC</dateModified>
+</layer>

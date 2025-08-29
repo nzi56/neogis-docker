@@ -1,0 +1,17 @@
+<layer>
+  <name>pole_ds_lines</name>
+  <id>LayerInfoImpl-2ec0d7e8:198c572ae7b:-7fe2</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-68a15b7f:198c0a44f64:-7fd7</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-2ec0d7e8:198c572ae7b:-7fe3</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-20 04:01:08.653 UTC</dateCreated>
+  <dateModified>2025-08-26 12:52:29.796 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>cs_route_to_consumer_pole</name>
+  <id>LayerInfoImpl--15072316:198c043ff5f:-7ff2</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--15072316:198c043ff5f:-7ff5</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--15072316:198c043ff5f:-7ff3</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-19 03:48:35.852 UTC</dateCreated>
+  <dateModified>2025-08-26 10:19:09.191 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>pole_selected_pole</name>
+  <id>LayerInfoImpl-2ec0d7e8:198c572ae7b:-7fd6</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-2332805a:198da066c82:-7f58</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-2ec0d7e8:198c572ae7b:-7fd7</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-20 04:08:02.547 UTC</dateCreated>
+  <dateModified>2025-08-26 13:02:13.376 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>pole_ds_tr</name>
+  <id>LayerInfoImpl-2ec0d7e8:198c572ae7b:-7fdc</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-1845bceb:198bb769079:-7fec</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-2ec0d7e8:198c572ae7b:-7fdd</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-20 04:05:17.142 UTC</dateCreated>
+  <dateModified>2025-08-26 12:54:48.295 UTC</dateModified>
+</layer>

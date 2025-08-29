@@ -1,0 +1,17 @@
+<layer>
+  <name>tr_feeder_consumer</name>
+  <id>LayerInfoImpl-68a15b7f:198c0a44f64:-7fdf</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--15072316:198c043ff5f:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-68a15b7f:198c0a44f64:-7fe0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-19 05:58:33.297 UTC</dateCreated>
+  <dateModified>2025-08-28 07:26:12.845 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>fdr_selected_400V_line</name>
+  <id>LayerInfoImpl--497abb5e:198caf9dbde:-7fd1</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-68a15b7f:198c0a44f64:-7fd7</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--497abb5e:198caf9dbde:-7fd2</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-21 09:31:58.816 UTC</dateCreated>
+  <dateModified>2025-08-26 11:21:04.144 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>cs_selected_tr</name>
+  <id>LayerInfoImpl-1845bceb:198bb769079:-7fed</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-2332805a:198da066c82:-7f56</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-1845bceb:198bb769079:-7fee</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-18 10:56:30.926 UTC</dateCreated>
+  <dateModified>2025-08-26 10:31:37.629 UTC</dateModified>
+</layer>

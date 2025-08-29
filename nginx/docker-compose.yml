@@ -1,0 +1,16 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-reverse-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      #- ./etc_nginx:/etc/nginx:ro 
+      - ./etc/nginx/conf.d:/etc/nginx/conf.d:ro 
+    restart: unless-stopped
+    networks:
+      - shared_net      
+networks:
+  shared_net:
+    external: true      
