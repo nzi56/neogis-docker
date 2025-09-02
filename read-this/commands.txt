@@ -23,6 +23,7 @@ then remove ./etc_nginx folder
 host.docker.internal on windows
 172.17.0.1 on Linux
 ----
+cd E:\ng-dev\docker-dev\neogis-docker
 .\manage_compose.ps1 -Action down
 .\manage_compose.ps1 -Action up
 
