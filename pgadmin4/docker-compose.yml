@@ -1,0 +1,22 @@
+services:
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com  # Change to your preferred email
+      - PGADMIN_DEFAULT_PASSWORD=mnzryv     # Change to a secure password
+      - PGADMIN_CONFIG_SERVER_MODE=True
+      - PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED=False
+    ports:
+      - "8011:80"  # Map host port 80 to container port 80
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - shared_net
+    restart: unless-stopped
+
+networks:
+  shared_net:
+    external: true
+
+volumes:
+  pgadmin_data:

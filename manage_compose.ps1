@@ -8,9 +8,11 @@ param (
 # List of directories containing docker-compose.yml files (relative paths)
 $composeDirs = @(
     ".\postgres",
+    ".\pgadmin4",
     ".\webgis-api",
     ".\geoserver",
     ".\tomcat",
+    ".\portainer",
     ".\nginx"
 )
 

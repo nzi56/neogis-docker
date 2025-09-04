@@ -22,27 +22,9 @@ services:
     networks:
       - shared_net
 
-  pgadmin:
-    image: dpage/pgadmin4:latest
-    container_name: pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@example.com
-      PGADMIN_DEFAULT_PASSWORD: admin123
-      PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION: "True"
-      PGADMIN_CONFIG_LOGIN_BANNER: "Authorized use only."
-    ports:
-      - "8010:80"
-    depends_on:
-      db:
-        condition: service_healthy
-    volumes:
-      - pgadmin_data:/var/lib/pgadmin
-    networks:
-      - shared_net
-
 volumes:
   db_data:
-  pgadmin_data:
+  # pgadmin_data:
 networks:
   shared_net:
     external: true
