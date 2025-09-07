@@ -10,6 +10,7 @@ $composeDirs = @(
     ".\postgres",
     ".\pgadmin4",
     ".\webgis-api",
+    ".\neogis-api",
     ".\geoserver",
     ".\tomcat",
     ".\portainer",
