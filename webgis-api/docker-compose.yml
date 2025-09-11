@@ -13,6 +13,9 @@ services:
       - SPRING_DATASOURCE_PASSWORD=mnzryv
       - JWT_SECRET=JxW8mXbH4rB3vDk2pQyN9aZcLmXhTuFeAgKcRjVpYtWqZpSfUxYhQrGmNtPaCbEk4rB3vDk2pQyN9aZcLmXhTuFeAgKcRjVpYtWqZpSfUxYhQ
       - JWT_EXPIRATION=3600000
+      #- SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI=http://localhost:8091/realms/neogis
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI= http://keycloak:8080/realms/neogis
+
     volumes:
       - ./target/webgis.war:/app/webgis.war  # Map the WAR file for easy updates
       - ./logs:/app/logs  # Map logs directory for persistence

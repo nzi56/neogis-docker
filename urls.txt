@@ -1,0 +1,39 @@
+curl -X POST "http://localhost:8091/realms/neogis/protocol/openid-connect/token" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "client_id=webgis-frontend" \
+  -d "grant_type=password" \
+  -d "username=nazrul" \
+  -d "password=mnzryv" \
+  -d "scope=openid"
+
+
+curl -X POST "http://localhost:8091/realms/neogis/protocol/openid-connect/token" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "client_id=webgis-frontend" \
+  -d "client_secret=zkhQ5DLTfGLBSq0TFemEqoHjW1jEiUcT" \
+  -d "grant_type=password" \
+  -d "username=nazrul" \
+  -d "password=mnzryv" \
+  -d "scope=openid"
+
+
+zkhQ5DLTfGLBSq0TFemEqoHjW1jEiUcT
+
+curl -X POST "http://localhost:8091/realms/neogis/protocol/openid-connect/token" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "client_id=neogis-app" \
+  -d "client_secret=RpGuTChQakSzpit16E0yVMiIEDcUIH9S" \
+  -d "grant_type=password" \
+  -d "username=nazrul" \
+  -d "password=mnzryv" \
+  -d "scope=openid"
+
+  ----
+  TOKEN="eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmM3JPUHAycDNleDNUbzdPSTQzUEZLTldXQVc2UzF3TGljdzBvVVRvb28wIn0.eyJleHAiOjE3NTczMzkyMDYsImlhdCI6MTc1NzMzODkwNiwianRpIjoib25ydHJvOjkyMjA0ZGNiLTNhYTQtODgwNy00YjI3LTgyODFhZGY5YTJkOSIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA5MS9yZWFsbXMvbmVvZ2lzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImU3MjAxZGMwLTk1OTgtNDlmYi1hOTMzLTJjMDI2YzM5MzZiMCIsInR5cCI6IkJlYXJlciIsImF6cCI6IndlYmdpcy1jb25maWRlbnRpYWwiLCJzaWQiOiJlZGQwZGE2MC1jNTYyLTRjODUtYjQyZS04MTljYTA5NWRlMzUiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iLCJBRE1JTiIsIlVTRVIiLCJkZWZhdWx0LXJvbGVzLW5lb2dpcyJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6Im5henJ1bCBpc2xhbSIsInByZWZlcnJlZF91c2VybmFtZSI6Im5henJ1bCIsImdpdmVuX25hbWUiOiJuYXpydWwiLCJmYW1pbHlfbmFtZSI6ImlzbGFtIiwiZW1haWwiOiJuYXpydWw1NkBnbWFpbC5jb20ifQ.nCig9FXZWDKnhfzHxxAXD50xK1nbs2ur641V3J47-dStrZ2Dry-Ds7ORmkAmaJI8Jpa11d2bIgedtBjMEAXf4F_1J9hJfih-v6Gfog5cXYc28Hnep3L8kjl3W4vUEhZtifkMh3UCR6XshJ3H5bUKwRYZfSycjth-SIXq9RihebWneQi33wEAUBgxo4neTmQLFFP1qYZuiZCTVWsOeYFsqrwbFoRuSflwB1tqkZJNwzlI1nOs6vOl9OAZYNkniuGBHo_48JzFvL312LdOrpLzFy0lYqcPM8tg2h99Pk7B33pQsO7ERn1N_jCpg9rRw6a5am_Yj1YDXxQAoRUOiI6eUw"
+curl -X GET "http://localhost:8090/webgis/api/list/roles" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Accept: application/json"
+
+
+  curl -H "Authorization: Bearer <ACCESS_TOKEN>" \
+  "http://localhost:8090/webgis/api/webgis/api/whoami"

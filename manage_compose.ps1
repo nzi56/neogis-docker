@@ -9,9 +9,10 @@ param (
 $composeDirs = @(
     ".\postgres",
     ".\pgadmin4",
+    ".\keycloak",  
     ".\webgis-api",
     ".\neogis-api",
-    ".\geoserver",
+    #".\geoserver",
     ".\tomcat",
     ".\portainer",
     ".\nginx"

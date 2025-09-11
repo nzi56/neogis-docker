@@ -1,0 +1,25 @@
+services:
+  # Your existing services (e.g., your Spring Boot app and db) go here...
+  
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: keycloak
+    command: start-dev  # Development mode; use 'start' for production
+    environment:
+      KC_DB: postgres
+      KC_DB_URL_HOST: pg16  # References your 'db' service on shared_net
+      KC_DB_URL_DATABASE: kcdb
+      KC_DB_USERNAME: postgres
+      KC_DB_PASSWORD: mnzryv
+      KC_DB_SCHEMA: public
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin  # Change this for security
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin  # Change this for security
+      KC_HOSTNAME_STRICT: false  # Allows access from localhost in dev
+      KC_HTTP_ENABLED: true  # Enables HTTP in dev (use HTTPS in prod)
+    ports:
+      - "8091:8080"  # Map to 8081 to avoid conflict with Spring Boot (adjust if needed)
+    networks:
+      - shared_net
+networks:
+  shared_net:
+    external: true # Or your existing config
