@@ -1,11 +1,11 @@
 services:
-  # Your Spring Boot WebGIS application with volume mapping
-  webgis-app:
+  # Your Spring Boot neoGIS application with volume mapping
+  neogis-app:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8050:8050"
+      - "8050:8090"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
       - SPRING_DATASOURCE_URL=jdbc:postgresql://pg16:5432/neogis

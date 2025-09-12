@@ -14,4 +14,4 @@ RUN mkdir -p /app/logs
 EXPOSE 8090
 
 # Run the application using the volume-mounted WAR file
-ENTRYPOINT ["java", "-jar", "neogis.war", "--server.port=8050", "--server.servlet.context-path=/neogis"]
+ENTRYPOINT ["java", "-jar", "neogis.war", "--server.port=8090", "--server.servlet.context-path=/neogis"]
