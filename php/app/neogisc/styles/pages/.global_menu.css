@@ -1,0 +1,8 @@
+[data-page=".global_menu"][data-itemid="welcome_item"] > .bs-welcome-header {
+  background-color: #EDCA00;
+}
+[data-page=".global_menu"][data-itemid="welcome_item1"] > .bs-welcome-header {
+  background-color: #E07878;
+}
+
+

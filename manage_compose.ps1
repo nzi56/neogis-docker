@@ -15,6 +15,7 @@ $composeDirs = @(
     #".\neogis-kc-api",
     #".\geoserver",
     ".\tomcat",
+    ".\php",
     ".\portainer",
     ".\nginx"
 )

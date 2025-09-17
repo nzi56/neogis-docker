@@ -1,0 +1,435 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel config_layers_info search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN pkey_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pkey}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="pkey{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="pkey" data-fieldname="pkey" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_pkey}">
+		{$label config_layers_info pkey }	</label>
+	<div class="r-search-option">
+		{$searchtype_pkey}
+	</div>
+	<div class="r-search-field">
+		{$pkey_editcontrol}	</div>
+	<div class="r-search-field">
+		{$pkey_editcontrol1}
+	</div>
+	
+</div>
+
+{END pkey_fieldblock}
+											
+{BEGIN description_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_description}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="description{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="description" data-fieldname="description" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_description}">
+		{$label config_layers_info description }	</label>
+	<div class="r-search-option">
+		{$searchtype_description}
+	</div>
+	<div class="r-search-field">
+		{$description_editcontrol}	</div>
+	<div class="r-search-field">
+		{$description_editcontrol1}
+	</div>
+	
+</div>
+
+{END description_fieldblock}
+											
+{BEGIN name_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_name}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="name{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="name" data-fieldname="name" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_name}">
+		{$label config_layers_info name }	</label>
+	<div class="r-search-option">
+		{$searchtype_name}
+	</div>
+	<div class="r-search-field">
+		{$name_editcontrol}	</div>
+	<div class="r-search-field">
+		{$name_editcontrol1}
+	</div>
+	
+</div>
+
+{END name_fieldblock}
+											
+{BEGIN sqlquery_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_sqlquery}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="sqlquery{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="sqlquery" data-fieldname="sqlquery" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_sqlquery}">
+		{$label config_layers_info sqlquery }	</label>
+	<div class="r-search-option">
+		{$searchtype_sqlquery}
+	</div>
+	<div class="r-search-field">
+		{$sqlquery_editcontrol}	</div>
+	<div class="r-search-field">
+		{$sqlquery_editcontrol1}
+	</div>
+	
+</div>
+
+{END sqlquery_fieldblock}
+											
+{BEGIN tableorview_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_tableorview}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="tableorview{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="tableorview" data-fieldname="tableorview" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_tableorview}">
+		{$label config_layers_info tableorview }	</label>
+	<div class="r-search-option">
+		{$searchtype_tableorview}
+	</div>
+	<div class="r-search-field">
+		{$tableorview_editcontrol}	</div>
+	<div class="r-search-field">
+		{$tableorview_editcontrol1}
+	</div>
+	
+</div>
+
+{END tableorview_fieldblock}
+											
+{BEGIN styles_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_styles}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="styles{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="styles" data-fieldname="styles" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_styles}">
+		{$label config_layers_info styles }	</label>
+	<div class="r-search-option">
+		{$searchtype_styles}
+	</div>
+	<div class="r-search-field">
+		{$styles_editcontrol}	</div>
+	<div class="r-search-field">
+		{$styles_editcontrol1}
+	</div>
+	
+</div>
+
+{END styles_fieldblock}
+											
+{BEGIN layer_group_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_layer_group}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="layer_group{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="layer_group" data-fieldname="layer_group" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_layer_group}">
+		{$label config_layers_info layer_group }	</label>
+	<div class="r-search-option">
+		{$searchtype_layer_group}
+	</div>
+	<div class="r-search-field">
+		{$layer_group_editcontrol}	</div>
+	<div class="r-search-field">
+		{$layer_group_editcontrol1}
+	</div>
+	
+</div>
+
+{END layer_group_fieldblock}
+											
+{BEGIN is_visible_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_is_visible}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="is_visible{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="is_visible" data-fieldname="is_visible" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_is_visible}">
+		{$label config_layers_info is_visible }	</label>
+	<div class="r-search-option">
+		{$searchtype_is_visible}
+	</div>
+	<div class="r-search-field">
+		{$is_visible_editcontrol}	</div>
+	<div class="r-search-field">
+		{$is_visible_editcontrol1}
+	</div>
+	
+</div>
+
+{END is_visible_fieldblock}
+											
+{BEGIN status_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_status}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="status{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="status" data-fieldname="status" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_status}">
+		{$label config_layers_info status }	</label>
+	<div class="r-search-option">
+		{$searchtype_status}
+	</div>
+	<div class="r-search-field">
+		{$status_editcontrol}	</div>
+	<div class="r-search-field">
+		{$status_editcontrol1}
+	</div>
+	
+</div>
+
+{END status_fieldblock}
+											
+{BEGIN sl_no_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_sl_no}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="sl_no{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="sl_no" data-fieldname="sl_no" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_sl_no}">
+		{$label config_layers_info sl_no }	</label>
+	<div class="r-search-option">
+		{$searchtype_sl_no}
+	</div>
+	<div class="r-search-field">
+		{$sl_no_editcontrol}	</div>
+	<div class="r-search-field">
+		{$sl_no_editcontrol1}
+	</div>
+	
+</div>
+
+{END sl_no_fieldblock}
+											
+{BEGIN info_view_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_info_view}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="info_view{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="info_view" data-fieldname="info_view" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_info_view}">
+		{$label config_layers_info info_view }	</label>
+	<div class="r-search-option">
+		{$searchtype_info_view}
+	</div>
+	<div class="r-search-field">
+		{$info_view_editcontrol}	</div>
+	<div class="r-search-field">
+		{$info_view_editcontrol1}
+	</div>
+	
+</div>
+
+{END info_view_fieldblock}
+											
+{BEGIN info_key_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_info_key}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="info_key{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="info_key" data-fieldname="info_key" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_info_key}">
+		{$label config_layers_info info_key }	</label>
+	<div class="r-search-option">
+		{$searchtype_info_key}
+	</div>
+	<div class="r-search-field">
+		{$info_key_editcontrol}	</div>
+	<div class="r-search-field">
+		{$info_key_editcontrol1}
+	</div>
+	
+</div>
+
+{END info_key_fieldblock}
+											
+{BEGIN geom_column_name_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_geom_column_name}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="geom_column_name{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="geom_column_name" data-fieldname="geom_column_name" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_geom_column_name}">
+		{$label config_layers_info geom_column_name }	</label>
+	<div class="r-search-option">
+		{$searchtype_geom_column_name}
+	</div>
+	<div class="r-search-field">
+		{$geom_column_name_editcontrol}	</div>
+	<div class="r-search-field">
+		{$geom_column_name_editcontrol1}
+	</div>
+	
+</div>
+
+{END geom_column_name_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Search			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reset			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

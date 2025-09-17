@@ -1,0 +1,15 @@
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7020:80"
+    volumes:
+      - ./app:/var/www/html
+    networks:
+      - shared_net     
+
+networks:
+  shared_net:
+    external: true
