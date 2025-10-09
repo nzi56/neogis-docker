@@ -4,3 +4,6 @@ http://localhost/reporting/neogis-reporting.jsp?reportId=1000
 
 
 .\manage_compose.ps1 -Action down/up
+
+db backup location in google-drive:
+My Drive/2025/neogis-db/
