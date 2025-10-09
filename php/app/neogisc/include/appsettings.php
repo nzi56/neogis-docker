@@ -679,9 +679,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "8_1758115215";
+$projectBuildKey = "9_1758115215";
 $wizardBuildKey = "37251";
-$projectBuildNumber = "8";
+$projectBuildNumber = "9";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -802,7 +802,7 @@ $conn = $cman->getDefault()->conn;
 
 $isGroupSecurity = false;
 
-$isUseRTEBasic = false;
+$isUseRTEBasic = true;
 
 $isUseRTECK = false;
 

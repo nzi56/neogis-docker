@@ -1,0 +1,17 @@
+<layer>
+  <name>fdr_selected_pole</name>
+  <id>LayerInfoImpl--497abb5e:198caf9dbde:-7fcb</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-1845bceb:198bb769079:-7ff1</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--497abb5e:198caf9dbde:-7fcc</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-21 09:34:35.161 UTC</dateCreated>
+  <dateModified>2025-08-26 13:25:04.887 UTC</dateModified>
+</layer>

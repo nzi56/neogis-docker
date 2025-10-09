@@ -1,0 +1,16 @@
+<layer>
+  <name>utility_mv_line</name>
+  <id>LayerInfoImpl-9a211ac:199bfc4de00:-7ffd</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fe3</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-9a211ac:199bfc4de00:-7ffe</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-10-07 17:44:17.949 UTC</dateCreated>
+</layer>

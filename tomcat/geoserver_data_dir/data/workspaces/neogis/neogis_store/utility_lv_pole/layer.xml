@@ -1,0 +1,17 @@
+<layer>
+  <name>utility_lv_pole</name>
+  <id>LayerInfoImpl-9a211ac:199bfc4de00:-7ff3</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-1845bceb:198bb769079:-7ff1</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-9a211ac:199bfc4de00:-7ff4</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-10-07 17:50:55.74 UTC</dateCreated>
+  <dateModified>2025-10-07 18:12:45.821 UTC</dateModified>
+</layer>

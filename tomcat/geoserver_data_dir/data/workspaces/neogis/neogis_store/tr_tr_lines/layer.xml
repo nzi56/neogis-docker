@@ -1,0 +1,17 @@
+<layer>
+  <name>tr_tr_lines</name>
+  <id>LayerInfoImpl-68a15b7f:198c0a44f64:-7ffa</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-68a15b7f:198c0a44f64:-7ff8</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-68a15b7f:198c0a44f64:-7ffb</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-19 05:02:27.772 UTC</dateCreated>
+  <dateModified>2025-08-26 13:19:08.534 UTC</dateModified>
+</layer>

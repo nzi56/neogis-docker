@@ -1,0 +1,17 @@
+<layer>
+  <name>ss_selected_ss</name>
+  <id>LayerInfoImpl--497abb5e:198caf9dbde:-7fe4</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--489ff6d1:198bd70c159:-7ff7</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--497abb5e:198caf9dbde:-7fe5</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-21 05:43:11.845 UTC</dateCreated>
+  <dateModified>2025-08-26 13:08:11.388 UTC</dateModified>
+</layer>

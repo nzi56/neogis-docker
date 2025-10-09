@@ -1,0 +1,17 @@
+<layer>
+  <name>ls_selected_line_section_ss</name>
+  <id>LayerInfoImpl-2ec0d7e8:198c572ae7b:-7ff6</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--489ff6d1:198bd70c159:-7ff7</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-2ec0d7e8:198c572ae7b:-7ff7</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-20 03:47:12.882 UTC</dateCreated>
+  <dateModified>2025-08-26 11:53:23.18 UTC</dateModified>
+</layer>

@@ -1,0 +1,17 @@
+<layer>
+  <name>ss_selected_tr</name>
+  <id>LayerInfoImpl--497abb5e:198caf9dbde:-7fe7</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-2332805a:198da066c82:-7f56</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--497abb5e:198caf9dbde:-7fe8</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-21 05:42:09.915 UTC</dateCreated>
+  <dateModified>2025-08-26 13:08:39.600 UTC</dateModified>
+</layer>

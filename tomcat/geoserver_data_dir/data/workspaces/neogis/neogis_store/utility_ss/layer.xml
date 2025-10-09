@@ -1,0 +1,16 @@
+<layer>
+  <name>utility_ss</name>
+  <id>LayerInfoImpl--7d1a276f:199beacf378:-7ff5</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--489ff6d1:198bd70c159:-7ff7</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7d1a276f:199beacf378:-7ff6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-10-07 12:44:01.387 UTC</dateCreated>
+</layer>

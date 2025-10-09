@@ -1,0 +1,17 @@
+<layer>
+  <name>ss_selected_consumer</name>
+  <id>LayerInfoImpl--497abb5e:198caf9dbde:-7fed</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--15072316:198c043ff5f:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--497abb5e:198caf9dbde:-7fee</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-21 05:39:14.318 UTC</dateCreated>
+  <dateModified>2025-08-28 07:26:33.868 UTC</dateModified>
+</layer>

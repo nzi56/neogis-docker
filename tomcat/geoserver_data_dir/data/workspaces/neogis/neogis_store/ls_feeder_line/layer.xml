@@ -1,0 +1,17 @@
+<layer>
+  <name>ls_feeder_line</name>
+  <id>LayerInfoImpl-2ec0d7e8:198c572ae7b:-7ff3</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--489ff6d1:198bd70c159:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-2ec0d7e8:198c572ae7b:-7ff4</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-20 03:49:07.356 UTC</dateCreated>
+  <dateModified>2025-08-26 11:46:21.169 UTC</dateModified>
+</layer>

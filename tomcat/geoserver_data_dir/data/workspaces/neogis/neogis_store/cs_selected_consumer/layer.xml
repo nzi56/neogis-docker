@@ -1,0 +1,17 @@
+<layer>
+  <name>cs_selected_consumer</name>
+  <id>LayerInfoImpl-7009a7d6:198b31e1393:-7ffc</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--15072316:198c043ff5f:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-7009a7d6:198b31e1393:-7ffd</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-08-16 13:43:40.935 UTC</dateCreated>
+  <dateModified>2025-08-26 10:23:50.421 UTC</dateModified>
+</layer>

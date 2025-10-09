@@ -1,0 +1,17 @@
+<layer>
+  <name>utility_mv_pole</name>
+  <id>LayerInfoImpl-9a211ac:199bfc4de00:-7ff6</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-1845bceb:198bb769079:-7ff1</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-9a211ac:199bfc4de00:-7ff7</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2025-10-07 17:49:11.298 UTC</dateCreated>
+  <dateModified>2025-10-07 18:13:06.544 UTC</dateModified>
+</layer>
