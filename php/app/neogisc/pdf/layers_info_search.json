@@ -200,6 +200,24 @@ pdfDocument = {
 				
 			{"text":{$geom_column_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
 				
+				
+			{"text":{$sub_group_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
+				
+				
+			{"text":{$geom_type_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+				
+				
+			{"text":{$info_group_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
+				
+				
+			{"text":{$minzoom_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
+				
+				
+			{"text":{$maxzoom_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
+				
+				
+			{"text":{$sld_name_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

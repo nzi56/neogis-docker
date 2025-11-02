@@ -3,3 +3,7 @@ docker cp pg16:/var/lib/postgresql/data/pg_hba.conf ./pg_hba.conf
 
 docker exec -it pg16 psql -U postgres -d postgres -c "SHOW log_min_messages;"
 docker exec -it pg16 psql -U postgres -d postgres -c "SHOW password_encryption;"
+
+
+cd E:\ng-dev\docker-dev\neogis-docker\postgres\conf
+docker cp ./new-postgresql.conf  pg16:/var/lib/postgresql/data/postgresql.conf 

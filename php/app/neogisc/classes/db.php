@@ -407,8 +407,6 @@ class DB
 		{
 			$dalTables[$conn->connId][] = array("name" => "layers_group", "varname" => "neogisc_at_localhost_config_layers_group", "altvarname" => "layers_group", "connId" => "neogisc_at_localhost", "schema" => "config", "connName" => "neogis at localhost");
 			$dalTables[$conn->connId][] = array("name" => "layers_info", "varname" => "neogisc_at_localhost_config_layers_info", "altvarname" => "layers_info", "connId" => "neogisc_at_localhost", "schema" => "config", "connName" => "neogis at localhost");
-			$dalTables[$conn->connId][] = array("name" => "reports_info", "varname" => "neogisc_at_localhost_config_reports_info", "altvarname" => "reports_info", "connId" => "neogisc_at_localhost", "schema" => "config", "connName" => "neogis at localhost");
-			$dalTables[$conn->connId][] = array("name" => "refresh_tokens", "varname" => "neogisc_at_localhost_public_refresh_tokens", "altvarname" => "refresh_tokens", "connId" => "neogisc_at_localhost", "schema" => "public", "connName" => "neogis at localhost");
 		}
 	}
 

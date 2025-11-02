@@ -121,6 +121,24 @@ pdfDocument = {
 				
 			{"text":{$sl_no_pdfvalue},"hidden":"{$item_hide_import_field9}"},
 				
+				
+			{"text":{$sub_group_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$geom_type_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$info_group_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$minzoom_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$maxzoom_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$sld_name_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

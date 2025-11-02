@@ -7,3 +7,6 @@ http://localhost/reporting/neogis-reporting.jsp?reportId=1000
 
 db backup location in google-drive:
 My Drive/2025/neogis-db/
+
+
+ng serve --base-href /nsight/

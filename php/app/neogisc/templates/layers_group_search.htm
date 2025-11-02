@@ -202,6 +202,50 @@
 </div>
 
 {END param_view_fieldblock}
+											
+{BEGIN default_zoom_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_default_zoom}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="default_zoom{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="default_zoom" data-fieldname="default_zoom" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_default_zoom}">
+		{$label config_layers_group default_zoom }	</label>
+	<div class="r-search-option">
+		{$searchtype_default_zoom}
+	</div>
+	<div class="r-search-field">
+		{$default_zoom_editcontrol}	</div>
+	<div class="r-search-field">
+		{$default_zoom_editcontrol1}
+	</div>
+	
+</div>
+
+{END default_zoom_fieldblock}
+											
+{BEGIN key_columns_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_key_columns}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="key_columns{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="key_columns" data-fieldname="key_columns" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_key_columns}">
+		{$label config_layers_group key_columns }	</label>
+	<div class="r-search-option">
+		{$searchtype_key_columns}
+	</div>
+	<div class="r-search-field">
+		{$key_columns_editcontrol}	</div>
+	<div class="r-search-field">
+		{$key_columns_editcontrol1}
+	</div>
+	
+</div>
+
+{END key_columns_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

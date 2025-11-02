@@ -40,6 +40,12 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelslayers_group["English"]["param_view"] = "Param View";
 	$fieldToolTipslayers_group["English"]["param_view"] = "";
 	$placeHolderslayers_group["English"]["param_view"] = "";
+	$fieldLabelslayers_group["English"]["default_zoom"] = "Default Zoom";
+	$fieldToolTipslayers_group["English"]["default_zoom"] = "";
+	$placeHolderslayers_group["English"]["default_zoom"] = "";
+	$fieldLabelslayers_group["English"]["key_columns"] = "Key Columns";
+	$fieldToolTipslayers_group["English"]["key_columns"] = "";
+	$placeHolderslayers_group["English"]["key_columns"] = "";
 	if (count($fieldToolTipslayers_group["English"]))
 		$tdatalayers_group[".isUseToolTips"] = true;
 }
@@ -164,6 +170,8 @@ $tdatalayers_group[".googleLikeFields"][] = "group_code";
 $tdatalayers_group[".googleLikeFields"][] = "group_description";
 $tdatalayers_group[".googleLikeFields"][] = "param_label";
 $tdatalayers_group[".googleLikeFields"][] = "param_view";
+$tdatalayers_group[".googleLikeFields"][] = "default_zoom";
+$tdatalayers_group[".googleLikeFields"][] = "key_columns";
 
 
 
@@ -197,7 +205,7 @@ $tdatalayers_group[".strOrderBy"] = $tstrOrderBy;
 $tdatalayers_group[".orderindexes"] = array();
 
 
-$tdatalayers_group[".sqlHead"] = "SELECT pkey,  	group_code,  	group_description,  	param_label,  	param_view";
+$tdatalayers_group[".sqlHead"] = "SELECT pkey,  	group_code,  	group_description,  	param_label,  	param_view,  	default_zoom,  	key_columns";
 $tdatalayers_group[".sqlFrom"] = "FROM config.layers_group";
 $tdatalayers_group[".sqlWhereExpr"] = "";
 $tdatalayers_group[".sqlTail"] = "";
@@ -945,6 +953,285 @@ $tdatalayers_group[".hideMobileList"] = array();
 
 	$tdatalayers_group["param_view"] = $fdata;
 		$tdatalayers_group[".searchableFields"][] = "param_view";
+//	default_zoom
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 6;
+	$fdata["strName"] = "default_zoom";
+	$fdata["GoodName"] = "default_zoom";
+	$fdata["ownerTable"] = "config.layers_group";
+	$fdata["Label"] = GetFieldLabel("config_layers_group","default_zoom");
+	$fdata["FieldType"] = 14;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "default_zoom";
+
+		$fdata["sourceSingle"] = "default_zoom";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "default_zoom";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Number");
+
+	
+	
+	
+	
+	
+	
+		$vdata["DecimalDigits"] = 0;
+
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalayers_group["default_zoom"] = $fdata;
+		$tdatalayers_group[".searchableFields"][] = "default_zoom";
+//	key_columns
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 7;
+	$fdata["strName"] = "key_columns";
+	$fdata["GoodName"] = "key_columns";
+	$fdata["ownerTable"] = "config.layers_group";
+	$fdata["Label"] = GetFieldLabel("config_layers_group","key_columns");
+	$fdata["FieldType"] = 201;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "key_columns";
+
+		$fdata["sourceSingle"] = "key_columns";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "key_columns";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text area");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 0;
+
+	
+	
+	
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
+
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 600;
+
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalayers_group["key_columns"] = $fdata;
+		$tdatalayers_group[".searchableFields"][] = "key_columns";
 
 
 $tables_data["config.layers_group"]=&$tdatalayers_group;
@@ -1016,7 +1303,7 @@ function createSqlQuery_layers_group()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "pkey,  	group_code,  	group_description,  	param_label,  	param_view";
+$proto0["m_strFieldList"] = "pkey,  	group_code,  	group_description,  	param_label,  	param_view,  	default_zoom,  	key_columns";
 $proto0["m_strFrom"] = "FROM config.layers_group";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1126,41 +1413,71 @@ $proto14["m_alias"] = "";
 $obj = new SQLFieldListItem($proto14);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto16=array();
-$proto16["m_link"] = "SQLL_MAIN";
-			$proto17=array();
-$proto17["m_strName"] = "config.layers_group";
-$proto17["m_srcTableName"] = "config.layers_group";
-$proto17["m_columns"] = array();
-$proto17["m_columns"][] = "pkey";
-$proto17["m_columns"][] = "group_code";
-$proto17["m_columns"][] = "group_description";
-$proto17["m_columns"][] = "param_label";
-$proto17["m_columns"][] = "param_view";
-$obj = new SQLTable($proto17);
+						$proto16=array();
+			$obj = new SQLField(array(
+	"m_strName" => "default_zoom",
+	"m_strTable" => "config.layers_group",
+	"m_srcTableName" => "config.layers_group"
+));
 
-$proto16["m_table"] = $obj;
-$proto16["m_sql"] = "config.layers_group";
-$proto16["m_alias"] = "";
+$proto16["m_sql"] = "default_zoom";
 $proto16["m_srcTableName"] = "config.layers_group";
-$proto18=array();
-$proto18["m_sql"] = "";
-$proto18["m_uniontype"] = "SQLL_UNKNOWN";
+$proto16["m_expr"]=$obj;
+$proto16["m_alias"] = "";
+$obj = new SQLFieldListItem($proto16);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto18=array();
+			$obj = new SQLField(array(
+	"m_strName" => "key_columns",
+	"m_strTable" => "config.layers_group",
+	"m_srcTableName" => "config.layers_group"
+));
+
+$proto18["m_sql"] = "key_columns";
+$proto18["m_srcTableName"] = "config.layers_group";
+$proto18["m_expr"]=$obj;
+$proto18["m_alias"] = "";
+$obj = new SQLFieldListItem($proto18);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto20=array();
+$proto20["m_link"] = "SQLL_MAIN";
+			$proto21=array();
+$proto21["m_strName"] = "config.layers_group";
+$proto21["m_srcTableName"] = "config.layers_group";
+$proto21["m_columns"] = array();
+$proto21["m_columns"][] = "pkey";
+$proto21["m_columns"][] = "group_code";
+$proto21["m_columns"][] = "group_description";
+$proto21["m_columns"][] = "param_label";
+$proto21["m_columns"][] = "param_view";
+$proto21["m_columns"][] = "default_zoom";
+$proto21["m_columns"][] = "key_columns";
+$obj = new SQLTable($proto21);
+
+$proto20["m_table"] = $obj;
+$proto20["m_sql"] = "config.layers_group";
+$proto20["m_alias"] = "";
+$proto20["m_srcTableName"] = "config.layers_group";
+$proto22=array();
+$proto22["m_sql"] = "";
+$proto22["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto18["m_column"]=$obj;
-$proto18["m_contained"] = array();
-$proto18["m_strCase"] = "";
-$proto18["m_havingmode"] = false;
-$proto18["m_inBrackets"] = false;
-$proto18["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto18);
+$proto22["m_column"]=$obj;
+$proto22["m_contained"] = array();
+$proto22["m_strCase"] = "";
+$proto22["m_havingmode"] = false;
+$proto22["m_inBrackets"] = false;
+$proto22["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto22);
 
-$proto16["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto16);
+$proto20["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto20);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1176,7 +1493,7 @@ $queryData_layers_group = createSqlQuery_layers_group();
 	
 		;
 
-					
+							
 
 $tdatalayers_group[".sqlquery"] = $queryData_layers_group;
 

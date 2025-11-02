@@ -13,6 +13,12 @@ $dalTablelayers_info["sl_no"] = array("type"=>3,"varname"=>"sl_no", "name" => "s
 $dalTablelayers_info["info_view"] = array("type"=>201,"varname"=>"info_view", "name" => "info_view");
 $dalTablelayers_info["info_key"] = array("type"=>201,"varname"=>"info_key", "name" => "info_key");
 $dalTablelayers_info["geom_column_name"] = array("type"=>201,"varname"=>"geom_column_name", "name" => "geom_column_name");
+$dalTablelayers_info["sub_group"] = array("type"=>201,"varname"=>"sub_group", "name" => "sub_group");
+$dalTablelayers_info["geom_type"] = array("type"=>201,"varname"=>"geom_type", "name" => "geom_type");
+$dalTablelayers_info["info_group"] = array("type"=>201,"varname"=>"info_group", "name" => "info_group");
+$dalTablelayers_info["minzoom"] = array("type"=>14,"varname"=>"minzoom", "name" => "minzoom");
+$dalTablelayers_info["maxzoom"] = array("type"=>14,"varname"=>"maxzoom", "name" => "maxzoom");
+$dalTablelayers_info["sld_name"] = array("type"=>201,"varname"=>"sld_name", "name" => "sld_name");
 	$dalTablelayers_info["pkey"]["key"]=true;
 
 $dal_info["neogisc_at_localhost_config_layers_info"] = &$dalTablelayers_info;

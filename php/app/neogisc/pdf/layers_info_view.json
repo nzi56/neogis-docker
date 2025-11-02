@@ -179,6 +179,24 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel config_layers_info sl_no }","bold":true},{"text":{$sl_no_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel config_layers_info sub_group }","bold":true},{"text":{$sub_group_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel config_layers_info geom_type }","bold":true},{"text":{$geom_type_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel config_layers_info info_group }","bold":true},{"text":{$info_group_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel config_layers_info minzoom }","bold":true},{"text":{$minzoom_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel config_layers_info maxzoom }","bold":true},{"text":{$maxzoom_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field11}","stack":[{"text":"{$jslabel config_layers_info sld_name }","bold":true},{"text":{$sld_name_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

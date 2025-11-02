@@ -99,7 +99,7 @@
 	 
 		{BEGIN group_code_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_code" data-fieldname="group_code">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_code" data-fieldname="group_code">
 	{$label config_layers_group group_code }	</span>
 {END group_code_fieldheadercolumn}
 
@@ -124,7 +124,7 @@
 	 
 		{BEGIN group_description_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_description" data-fieldname="group_description">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_description" data-fieldname="group_description">
 	{$label config_layers_group group_description }	</span>
 {END group_description_fieldheadercolumn}
 
@@ -149,7 +149,7 @@
 	 
 		{BEGIN param_label_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="param_label" data-fieldname="param_label">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="param_label" data-fieldname="param_label">
 	{$label config_layers_group param_label }	</span>
 {END param_label_fieldheadercolumn}
 
@@ -174,13 +174,63 @@
 	 
 		{BEGIN param_view_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="param_view" data-fieldname="param_view">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="param_view" data-fieldname="param_view">
 	{$label config_layers_group param_view }	</span>
 {END param_view_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field3}
+				 
+					{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$default_zoom_class}
+			"
+
+			data-field="default_zoom"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN default_zoom_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="default_zoom" data-fieldname="default_zoom">
+	{$label config_layers_group default_zoom }	</span>
+{END default_zoom_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+				 
+					{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$key_columns_class}
+			"
+
+			data-field="key_columns"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN key_columns_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="key_columns" data-fieldname="key_columns">
+	{$label config_layers_group key_columns }	</span>
+{END key_columns_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
 							</tr>
 					 
 					 
@@ -288,6 +338,52 @@
 {END param_view_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
+				 
+					{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$default_zoom_class}
+			"
+
+			data-field="default_zoom"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN default_zoom_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="default_zoom" data-fieldname="default_zoom" data-default-width >
+{$default_zoom_value}
+</span>
+{END default_zoom_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+				 
+					{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$key_columns_class}
+			"
+
+			data-field="key_columns"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN key_columns_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="key_columns" data-fieldname="key_columns" data-default-width >
+{$key_columns_value}
+</span>
+{END key_columns_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
 							</tr>
 					 
 					
@@ -367,6 +463,38 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
+				 
+					{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="layers_group_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+				 
+					{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="layers_group_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
 							</tr>
 					
 					</tfoot>

@@ -49,8 +49,6 @@ class tDAL
 {
 	var $tblneogisc_at_localhost_config_layers_group;
 	var $tblneogisc_at_localhost_config_layers_info;
-	var $tblneogisc_at_localhost_config_reports_info;
-	var $tblneogisc_at_localhost_public_refresh_tokens;
 	var $lstTables;
 	var $Table = array();
 
@@ -60,8 +58,6 @@ class tDAL
 			return;
 		$this->lstTables[] = array("name" => "layers_group", "varname" => "neogisc_at_localhost_config_layers_group", "altvarname" => "layers_group", "connId" => "neogisc_at_localhost", "schema" => "config", "connName" => "neogis at localhost");
 		$this->lstTables[] = array("name" => "layers_info", "varname" => "neogisc_at_localhost_config_layers_info", "altvarname" => "layers_info", "connId" => "neogisc_at_localhost", "schema" => "config", "connName" => "neogis at localhost");
-		$this->lstTables[] = array("name" => "reports_info", "varname" => "neogisc_at_localhost_config_reports_info", "altvarname" => "reports_info", "connId" => "neogisc_at_localhost", "schema" => "config", "connName" => "neogis at localhost");
-		$this->lstTables[] = array("name" => "refresh_tokens", "varname" => "neogisc_at_localhost_public_refresh_tokens", "altvarname" => "refresh_tokens", "connId" => "neogisc_at_localhost", "schema" => "public", "connName" => "neogis at localhost");
 	}
 
 	/**

@@ -115,6 +115,12 @@ pdfDocument = {
 				
 			{"text":{$param_view_pdfvalue},"hidden":"{$item_hide_import_field4}"},
 				
+				
+			{"text":{$default_zoom_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$key_columns_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

@@ -173,6 +173,12 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel config_layers_group param_view }","bold":true},{"text":{$param_view_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel config_layers_group default_zoom }","bold":true},{"text":{$default_zoom_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel config_layers_group key_columns }","bold":true},{"text":{$key_columns_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
