@@ -125,6 +125,49 @@ def print_grid():
             "message": f"Unexpected error: {str(e)}"
         }), 500
 
+@app.route("/pdf-list", methods=["GET"])
+def pdf_list():
+    """
+    Return list of all PDF files in OUTPUT_DIR.
+    Each item has:
+      - file_name
+      - created_at (ISO string, from file's ctime)
+    """
+    try:
+        if not os.path.isdir(OUTPUT_DIR):
+            return jsonify({
+                "status": "error",
+                "message": f"OUTPUT_DIR does not exist: {OUTPUT_DIR}"
+            }), 500
+
+        files_info = []
+
+        for entry in os.scandir(OUTPUT_DIR):
+            if entry.is_file() and entry.name.lower().endswith(".pdf"):
+                stat = entry.stat()
+                created_at = datetime.datetime.fromtimestamp(stat.st_ctime).isoformat()
+
+                files_info.append({
+                    "file_name": entry.name,
+                    "created_at": created_at
+                })
+
+        # sort by creation date descending (newest first)
+        files_info.sort(key=lambda x: x["created_at"], reverse=True)
+
+        return jsonify({
+            "status": "ok",
+            "count": len(files_info),
+            "files": files_info
+        }), 200
+
+    except Exception as e:
+        traceback.print_exc()
+        return jsonify({
+            "status": "error",
+            "message": f"Unexpected error: {str(e)}"
+        }), 500
+
 
 if __name__ == "__main__":
     try:
