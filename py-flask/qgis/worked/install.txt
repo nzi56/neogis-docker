@@ -11,3 +11,6 @@ cd E:\ng-dev\docker-dev\neogis-docker\py-flask\qgis
 
 :: Use QGIS Python to install Flask
 "C:\Program Files\QGIS 3.40.2\bin\python-qgis.bat" -m pip install flask
+
+
+"C:\Program Files\QGIS 3.40.2\bin\python-qgis.bat" pip install flask-cors
