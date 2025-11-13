@@ -1,7 +1,8 @@
 # app.py
 import os
+import tempfile
 import traceback
-from flask import Flask, request, jsonify
+from flask import Flask, request, send_file, jsonify
 
 from qgis.PyQt.QtCore import QVariant
 from qgis.core import (
@@ -11,9 +12,6 @@ from qgis.core import (
 )
 
 app = Flask(__name__)
-
-# CHANGE THIS TO YOUR ANGULAR PROJECT PATH
-ANGULAR_ASSETS = r"E:\ng-dev\neo-gis-web\src\assets\pdf"
 
 def log(msg):
     print(f"[QGIS] {msg}")
@@ -48,20 +46,48 @@ def create_n_m_grid(extent, n_cols, m_rows, crs_authid):
 @app.route('/generate_grid', methods=['POST'])
 def generate_grid():
     try:
+        raw = request.get_data(as_text=True)
+        log(f"Raw JSON: {repr(raw)}")
+
         data = request.get_json(force=True)
         if not data:
             return jsonify({"error": "Invalid JSON"}), 400
 
         project_path = data.get('project')
-        if not project_path or not os.path.exists(project_path):
-            return jsonify({"error": "File not found"}), 400
+        if not project_path:
+            return jsonify({"error": "Missing 'project'"}), 400
 
+        project_path = project_path.strip()
+        log(f"Original path: {repr(project_path)}")
+
+        # --- FIX: Replace double backslash ---
+        project_path = project_path.replace('\\\\', '\\')
+        log(f"Fixed path: {repr(project_path)}")
+
+        # --- Normalize path ---
+        project_path = os.path.normpath(project_path)
+        log(f"Normalized path: {repr(project_path)}")
+
+        # --- DEBUG: List folder ---
+        folder = os.path.dirname(project_path)
+        if os.path.exists(folder):
+            log(f"Folder contents: {os.listdir(folder)}")
+        else:
+            log(f"Folder NOT found: {folder}")
+
+        if not os.path.exists(project_path):
+            return jsonify({"error": f"File not found: {project_path}"}), 400
+
+        log(f"FILE EXISTS: {project_path}")
+
+        # --- Parameters ---
         n_cols = int(data.get('n_cols', 4))
         m_rows = int(data.get('m_rows', 3))
         layout_name = data.get('layout', 'TiledMap')
         extent = data.get('extent')
         crs = data.get('crs', 'EPSG:3857')
 
+        # --- QGIS ---
         qgs = QgsApplication([], False)
         qgs.initQgis()
 
@@ -78,7 +104,7 @@ def generate_grid():
         if not layout:
             project.removeMapLayer(grid)
             qgs.exitQgis()
-            return jsonify({"error": "Layout not found"}), 500
+            return jsonify({"error": f"Layout '{layout_name}' not found"}), 500
 
         atlas = layout.atlas()
         atlas.setEnabled(True)
@@ -92,9 +118,8 @@ def generate_grid():
             return jsonify({"error": "No map item"}), 500
         map_items[0].setAtlasDriven(True)
 
-        # SAVE TO ANGULAR ASSETS
-        os.makedirs(ANGULAR_ASSETS, exist_ok=True)
-        pdf_path = os.path.join(ANGULAR_ASSETS, "grid.pdf")
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as f:
+            pdf_path = f.name
 
         exporter = QgsLayoutExporter(layout)
         result = exporter.exportToPdf(pdf_path, QgsLayoutExporter.PdfExportSettings())
@@ -103,15 +128,22 @@ def generate_grid():
         qgs.exitQgis()
 
         if result != QgsLayoutExporter.Success:
-            return jsonify({"error": "Export failed"}), 500
+            if os.path.exists(pdf_path):
+                os.unlink(pdf_path)
+            return jsonify({"error": f"Export failed: {result}"}), 500
 
-        log(f"PDF saved to: {pdf_path}")
-        return jsonify({"success": True, "pdf": "/assets/pdf/grid.pdf"})
+        return send_file(pdf_path, mimetype='application/pdf', as_attachment=False)
 
     except Exception as e:
         log(f"ERROR: {str(e)}")
         traceback.print_exc()
         return jsonify({"error": str(e)}), 500
+    finally:
+        if 'pdf_path' in locals() and os.path.exists(pdf_path):
+            try:
+                os.unlink(pdf_path)
+            except:
+                pass
 
 @app.route('/')
 def home():

@@ -1,15 +1,35 @@
 # app.py
 import os
-import tempfile
+import io
 import traceback
-from flask import Flask, request, send_file, jsonify
+from flask import Flask, request, Response, jsonify
 
-from qgis.PyQt.QtCore import QVariant
 from qgis.core import (
     QgsApplication, QgsProject, QgsLayoutExporter,
     QgsVectorLayer, QgsFeature, QgsGeometry, QgsFields,
     QgsField, QgsCoordinateReferenceSystem, QgsRectangle
 )
+from qgis.PyQt.QtCore import QVariant
+
+# SINGLETON QGIS APP
+qgs = None
+
+def init_qgis():
+    global qgs
+    if qgs is None:
+        qgs = QgsApplication([], False)
+        qgs.initQgis()
+        print("[QGIS] Initialized (singleton)")
+
+def cleanup_qgis():
+    global qgs
+    if qgs is not None:
+        try:
+            qgs.exitQgis()
+            print("[QGIS] Cleaned up")
+        except:
+            pass
+        qgs = None
 
 app = Flask(__name__)
 
@@ -46,6 +66,8 @@ def create_n_m_grid(extent, n_cols, m_rows, crs_authid):
 @app.route('/generate_grid', methods=['POST'])
 def generate_grid():
     try:
+        init_qgis()  # Ensure QGIS is ready
+
         raw = request.get_data(as_text=True)
         log(f"Raw JSON: {repr(raw)}")
 
@@ -54,46 +76,17 @@ def generate_grid():
             return jsonify({"error": "Invalid JSON"}), 400
 
         project_path = data.get('project')
-        if not project_path:
-            return jsonify({"error": "Missing 'project'"}), 400
+        if not project_path or not os.path.exists(project_path):
+            return jsonify({"error": "File not found"}), 400
 
-        project_path = project_path.strip()
-        log(f"Original path: {repr(project_path)}")
-
-        # --- FIX: Replace double backslash ---
-        project_path = project_path.replace('\\\\', '\\')
-        log(f"Fixed path: {repr(project_path)}")
-
-        # --- Normalize path ---
-        project_path = os.path.normpath(project_path)
-        log(f"Normalized path: {repr(project_path)}")
-
-        # --- DEBUG: List folder ---
-        folder = os.path.dirname(project_path)
-        if os.path.exists(folder):
-            log(f"Folder contents: {os.listdir(folder)}")
-        else:
-            log(f"Folder NOT found: {folder}")
-
-        if not os.path.exists(project_path):
-            return jsonify({"error": f"File not found: {project_path}"}), 400
-
-        log(f"FILE EXISTS: {project_path}")
-
-        # --- Parameters ---
         n_cols = int(data.get('n_cols', 4))
         m_rows = int(data.get('m_rows', 3))
         layout_name = data.get('layout', 'TiledMap')
         extent = data.get('extent')
         crs = data.get('crs', 'EPSG:3857')
 
-        # --- QGIS ---
-        qgs = QgsApplication([], False)
-        qgs.initQgis()
-
         project = QgsProject.instance()
         if not project.read(project_path):
-            qgs.exitQgis()
             return jsonify({"error": "Failed to load QGZ"}), 500
 
         ext = QgsRectangle(*extent) if extent else project.viewSettings().fullExtent()
@@ -103,8 +96,7 @@ def generate_grid():
         layout = project.layoutManager().layoutByName(layout_name)
         if not layout:
             project.removeMapLayer(grid)
-            qgs.exitQgis()
-            return jsonify({"error": f"Layout '{layout_name}' not found"}), 500
+            return jsonify({"error": "Layout not found"}), 500
 
         atlas = layout.atlas()
         atlas.setEnabled(True)
@@ -114,41 +106,52 @@ def generate_grid():
         map_items = [i for i in layout.items() if i.type() == 65639]
         if not map_items:
             project.removeMapLayer(grid)
-            qgs.exitQgis()
             return jsonify({"error": "No map item"}), 500
         map_items[0].setAtlasDriven(True)
 
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as f:
-            pdf_path = f.name
+        # CORRECT EXPORT TO MEMORY
+        settings = QgsLayoutExporter.PdfExportSettings()
+        settings.dpi = 300
 
+        pdf_bytes = io.BytesIO()
         exporter = QgsLayoutExporter(layout)
-        result = exporter.exportToPdf(pdf_path, QgsLayoutExporter.PdfExportSettings())
+        result = exporter.exportToPdf(pdf_bytes, settings)
 
         project.removeMapLayer(grid)
-        qgs.exitQgis()
 
         if result != QgsLayoutExporter.Success:
-            if os.path.exists(pdf_path):
-                os.unlink(pdf_path)
-            return jsonify({"error": f"Export failed: {result}"}), 500
+            log(f"Export failed: {result}")
+            return jsonify({"error": "Export failed"}), 500
 
-        return send_file(pdf_path, mimetype='application/pdf', as_attachment=False)
+        pdf_bytes.seek(0)
+        pdf_data = pdf_bytes.getvalue()
+        log(f"PDF size: {len(pdf_data)} bytes")
+
+        if len(pdf_data) < 1000:
+            return jsonify({"error": "PDF too small"}), 500
+
+        return Response(
+            pdf_data,
+            mimetype='application/pdf',
+            headers={'Content-Disposition': 'inline; filename=grid.pdf'}
+        )
 
     except Exception as e:
         log(f"ERROR: {str(e)}")
         traceback.print_exc()
         return jsonify({"error": str(e)}), 500
-    finally:
-        if 'pdf_path' in locals() and os.path.exists(pdf_path):
-            try:
-                os.unlink(pdf_path)
-            except:
-                pass
 
-@app.route('/')
-def home():
-    return "QGIS PDF Service OK"
+@app.route('/health')
+def health():
+    return "OK"
+
+@app.teardown_appcontext
+def cleanup(exception=None):
+    cleanup_qgis()
 
 if __name__ == '__main__':
     log("Server starting...")
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    try:
+        app.run(host='0.0.0.0', port=5000, debug=False, threaded=True)
+    finally:
+        cleanup_qgis()
