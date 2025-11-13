@@ -28,7 +28,7 @@ from qgis.core import (
 # --------------------------
 
 QGIS_PROJECT_PATH = r"E:\ng-dev\docker-dev\neogis-docker\py-flask\qgis\map-project\neogis-map.qgz"
-OUTPUT_DIR = r"E:\ng-dev\docker-dev\neogis-docker\py-flask\qgis\map-project"
+OUTPUT_DIR = r"E:\ng-dev\docker-dev\neogis-docker\py-flask\qgis\map-project\download"
 
 
 LAYOUT_NAME = "TiledMap"   # QGIS layout name to export
