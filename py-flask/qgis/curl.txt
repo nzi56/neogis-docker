@@ -1,0 +1,29 @@
+curl -X POST http://localhost:5000/generate_grid ^
+     -H "Content-Type: application/json" ^
+     -d "{\"project\":\"E:\\ng-dev\\docker-dev\\neogis-docker\\py-flask\\qgis\\map-project\\neogis-map.qgz\",\"layout\":\"TiledMap\",\"n_cols\":4,\"m_rows\":3,\"crs\":\"EPSG:3857\"}" ^
+     --output grid_4x3.pdf
+
+     or 
+
+
+ps native no curl:
+
+$body = @{
+    project = "E:\ng-dev\docker-dev\neogis-docker\py-flask\qgis\map-project\neogis-map.qgz"
+    layout = "TiledMap"
+    n_cols = 4
+    m_rows = 3
+} | ConvertTo-Json
+
+Invoke-RestMethod -Uri http://localhost:5000/generate_grid -Method Post -Body $body -ContentType "application/json" -OutFile "grid.pdf"
+
+
+    
+
+    "%PYTHON_EXEC%" -c "print('QGIS Python OK')"
+
+
+curl -X POST http://localhost:5000/generate_grid ^
+     -H "Content-Type: application/json" ^
+     -d "{\"project\":\"E:\\\\ng-dev\\\\docker-dev\\\\neogis-docker\\\\py-flask\\\\qgis\\\\map-project\\\\neogis-map.qgz\",\"n_cols\":2,\"m_rows\":2}" ^
+     --output test.pdf && start test.pdf

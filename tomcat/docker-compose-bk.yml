@@ -5,7 +5,7 @@ services:
     ports:
       - "8082:8080"
     environment:
-      - JAVA_OPTS=-Xms2048m -Xmx8192m
+      - JAVA_OPTS=-Xms512m -Xmx1024m
     volumes:
       - ./webapps:/usr/local/tomcat/webapps
     restart: unless-stopped
