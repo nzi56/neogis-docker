@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  qgis-flask:
+    container_name: qgis-flask
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      # These must match what you use in app.py
+      QGIS_PROJECT_PATH: /app/qgis/map-project/neogis-map.qgz
+      QGIS_OUTPUT_DIR: /app/qgis/map-project/output
+      # Optional: if you want Flask in debug mode
+      FLASK_ENV: development
+    volumes:
+      # Map your Windows folder into the container
+      # Path is relative to location of this docker-compose.yml
+      - ./qgis/map-project:/app/qgis/map-project
+    restart: unless-stopped
