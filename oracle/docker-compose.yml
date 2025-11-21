@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  oracle-free:
+    image: container-registry.oracle.com/database/free:latest
+    container_name: oracle-free
+    environment:
+      - ORACLE_PWD=mnzryv       # SYS/SYSTEM password
+      - ORACLE_CHARACTERSET=AL32UTF8
+    ports:
+      - "1521:1521"   # Oracle listener
+      - "5500:5500"   # EM Express (optional)
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+      - ./init-scripts:/container-entrypoint-initdb.d    # Auto-run SQL scripts
+    shm_size: "1g"
+    restart: unless-stopped
+
+volumes:
+  oracle_data:
