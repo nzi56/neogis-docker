@@ -1,0 +1,239 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel config_stats_info search}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN pkey_fieldblock}		
+	<div class="container {$fielddispclass_pkey}" data-fieldname="pkey">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_pkey}">
+				{$label config_stats_info pkey}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_pkey}
+			</div>
+			<div class="col-md-4" >
+				{$pkey_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$pkey_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END pkey_fieldblock}
+	{BEGIN group_code_fieldblock}		
+	<div class="container {$fielddispclass_group_code}" data-fieldname="group_code">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_group_code}">
+				{$label config_stats_info group_code}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_group_code}
+			</div>
+			<div class="col-md-4" >
+				{$group_code_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$group_code_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END group_code_fieldblock}
+	{BEGIN stats_key_fieldblock}		
+	<div class="container {$fielddispclass_stats_key}" data-fieldname="stats_key">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_stats_key}">
+				{$label config_stats_info stats_key}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_stats_key}
+			</div>
+			<div class="col-md-4" >
+				{$stats_key_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$stats_key_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END stats_key_fieldblock}
+	{BEGIN stats_description_fieldblock}		
+	<div class="container {$fielddispclass_stats_description}" data-fieldname="stats_description">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_stats_description}">
+				{$label config_stats_info stats_description}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_stats_description}
+			</div>
+			<div class="col-md-4" >
+				{$stats_description_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$stats_description_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END stats_description_fieldblock}
+	{BEGIN sql_fieldblock}		
+	<div class="container {$fielddispclass_sql}" data-fieldname="sql">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_sql}">
+				{$label config_stats_info sql}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_sql}
+			</div>
+			<div class="col-md-4" >
+				{$sql_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$sql_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END sql_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container form-horizontal   "> 
+
+
+
+
+{BEGIN container_bbuttons}
+<div {$bbuttons_chiddenattr} data-pageid="{$pageid}" data-container="bbuttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-10 col-md-offset-2"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Search</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reset</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

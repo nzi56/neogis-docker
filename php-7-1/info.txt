@@ -1,0 +1,8 @@
+# 1. Stop everything
+docker-compose down
+
+# 2. Delete the old containers/images so we start clean
+docker-compose rm -f
+docker volume prune -f   # removes unnamed volumes
+
+docker-compose up -d --build

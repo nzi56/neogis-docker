@@ -1,0 +1,31 @@
+Here are the quickest and most useful ways to get a shell inside your running Oracle Free container:
+1. Simple bash shell (recommended)
+bat 
+docker exec -it oracle-free bash
+
+You land as the oracle user with the full Oracle environment already sourced.
+2. Direct root shell (if you need to install packages, etc.)
+bat
+docker exec -it --user root oracle-free bash
+
+3. Direct sqlplus as SYSTEM without password prompt
+bat
+docker exec -it oracle-free sqlplus system/mnzryv@//localhost:1521/FREE
+
+or inside the PDB:
+bat
+
+docker exec -it oracle-free sqlplus system/mnzryv@//localhost:1521/xepdb1
+
+4. Connect as your sferp user
+bat
+docker exec -it oracle-free sqlplus sferp/sferp@//localhost:1521/xepdb1
+5. One-liner to open bash and immediately become root (very handy)
+bat
+
+docker exec -it --user root oracle-free bash -c "su - oracle"
+
+No, the correct short version most people use:
+batdocker exec -it oracle-free bash
+6. If you ever want to keep the shell open even after exit (for debugging)
+bat

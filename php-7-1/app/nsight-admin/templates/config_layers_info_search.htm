@@ -1,0 +1,563 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel config_layers_info search}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN pkey_fieldblock}		
+	<div class="container {$fielddispclass_pkey}" data-fieldname="pkey">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_pkey}">
+				{$label config_layers_info pkey}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_pkey}
+			</div>
+			<div class="col-md-4" >
+				{$pkey_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$pkey_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END pkey_fieldblock}
+	{BEGIN description_fieldblock}		
+	<div class="container {$fielddispclass_description}" data-fieldname="description">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_description}">
+				{$label config_layers_info description}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_description}
+			</div>
+			<div class="col-md-4" >
+				{$description_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$description_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END description_fieldblock}
+	{BEGIN name_fieldblock}		
+	<div class="container {$fielddispclass_name}" data-fieldname="name">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_name}">
+				{$label config_layers_info name}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_name}
+			</div>
+			<div class="col-md-4" >
+				{$name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END name_fieldblock}
+	{BEGIN sqlquery_fieldblock}		
+	<div class="container {$fielddispclass_sqlquery}" data-fieldname="sqlquery">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_sqlquery}">
+				{$label config_layers_info sqlquery}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_sqlquery}
+			</div>
+			<div class="col-md-4" >
+				{$sqlquery_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$sqlquery_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END sqlquery_fieldblock}
+	{BEGIN tableorview_fieldblock}		
+	<div class="container {$fielddispclass_tableorview}" data-fieldname="tableorview">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_tableorview}">
+				{$label config_layers_info tableorview}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_tableorview}
+			</div>
+			<div class="col-md-4" >
+				{$tableorview_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$tableorview_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END tableorview_fieldblock}
+	{BEGIN styles_fieldblock}		
+	<div class="container {$fielddispclass_styles}" data-fieldname="styles">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_styles}">
+				{$label config_layers_info styles}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_styles}
+			</div>
+			<div class="col-md-4" >
+				{$styles_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$styles_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END styles_fieldblock}
+	{BEGIN layer_group_fieldblock}		
+	<div class="container {$fielddispclass_layer_group}" data-fieldname="layer_group">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_layer_group}">
+				{$label config_layers_info layer_group}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_layer_group}
+			</div>
+			<div class="col-md-4" >
+				{$layer_group_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$layer_group_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END layer_group_fieldblock}
+	{BEGIN is_visible_fieldblock}		
+	<div class="container {$fielddispclass_is_visible}" data-fieldname="is_visible">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_is_visible}">
+				{$label config_layers_info is_visible}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_is_visible}
+			</div>
+			<div class="col-md-4" >
+				{$is_visible_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$is_visible_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END is_visible_fieldblock}
+	{BEGIN status_fieldblock}		
+	<div class="container {$fielddispclass_status}" data-fieldname="status">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_status}">
+				{$label config_layers_info status}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_status}
+			</div>
+			<div class="col-md-4" >
+				{$status_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$status_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END status_fieldblock}
+	{BEGIN sl_no_fieldblock}		
+	<div class="container {$fielddispclass_sl_no}" data-fieldname="sl_no">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_sl_no}">
+				{$label config_layers_info sl_no}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_sl_no}
+			</div>
+			<div class="col-md-4" >
+				{$sl_no_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$sl_no_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END sl_no_fieldblock}
+	{BEGIN info_view_fieldblock}		
+	<div class="container {$fielddispclass_info_view}" data-fieldname="info_view">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_info_view}">
+				{$label config_layers_info info_view}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_info_view}
+			</div>
+			<div class="col-md-4" >
+				{$info_view_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$info_view_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END info_view_fieldblock}
+	{BEGIN info_key_fieldblock}		
+	<div class="container {$fielddispclass_info_key}" data-fieldname="info_key">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_info_key}">
+				{$label config_layers_info info_key}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_info_key}
+			</div>
+			<div class="col-md-4" >
+				{$info_key_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$info_key_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END info_key_fieldblock}
+	{BEGIN geom_column_name_fieldblock}		
+	<div class="container {$fielddispclass_geom_column_name}" data-fieldname="geom_column_name">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_geom_column_name}">
+				{$label config_layers_info geom_column_name}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_geom_column_name}
+			</div>
+			<div class="col-md-4" >
+				{$geom_column_name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$geom_column_name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END geom_column_name_fieldblock}
+	{BEGIN sub_group_fieldblock}		
+	<div class="container {$fielddispclass_sub_group}" data-fieldname="sub_group">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_sub_group}">
+				{$label config_layers_info sub_group}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_sub_group}
+			</div>
+			<div class="col-md-4" >
+				{$sub_group_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$sub_group_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END sub_group_fieldblock}
+	{BEGIN geom_type_fieldblock}		
+	<div class="container {$fielddispclass_geom_type}" data-fieldname="geom_type">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_geom_type}">
+				{$label config_layers_info geom_type}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_geom_type}
+			</div>
+			<div class="col-md-4" >
+				{$geom_type_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$geom_type_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END geom_type_fieldblock}
+	{BEGIN info_group_fieldblock}		
+	<div class="container {$fielddispclass_info_group}" data-fieldname="info_group">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_info_group}">
+				{$label config_layers_info info_group}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_info_group}
+			</div>
+			<div class="col-md-4" >
+				{$info_group_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$info_group_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END info_group_fieldblock}
+	{BEGIN minzoom_fieldblock}		
+	<div class="container {$fielddispclass_minzoom}" data-fieldname="minzoom">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_minzoom}">
+				{$label config_layers_info minzoom}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_minzoom}
+			</div>
+			<div class="col-md-4" >
+				{$minzoom_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$minzoom_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END minzoom_fieldblock}
+	{BEGIN maxzoom_fieldblock}		
+	<div class="container {$fielddispclass_maxzoom}" data-fieldname="maxzoom">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_maxzoom}">
+				{$label config_layers_info maxzoom}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_maxzoom}
+			</div>
+			<div class="col-md-4" >
+				{$maxzoom_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$maxzoom_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END maxzoom_fieldblock}
+	{BEGIN sld_name_fieldblock}		
+	<div class="container {$fielddispclass_sld_name}" data-fieldname="sld_name">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_sld_name}">
+				{$label config_layers_info sld_name}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_sld_name}
+			</div>
+			<div class="col-md-4" >
+				{$sld_name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$sld_name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END sld_name_fieldblock}
+	{BEGIN hls_code_fieldblock}		
+	<div class="container {$fielddispclass_hls_code}" data-fieldname="hls_code">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_hls_code}">
+				{$label config_layers_info hls_code}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_hls_code}
+			</div>
+			<div class="col-md-4" >
+				{$hls_code_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$hls_code_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END hls_code_fieldblock}
+	{BEGIN is_device_fieldblock}		
+	<div class="container {$fielddispclass_is_device}" data-fieldname="is_device">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_is_device}">
+				{$label config_layers_info is_device}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_is_device}
+			</div>
+			<div class="col-md-4" >
+				{$is_device_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$is_device_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END is_device_fieldblock}
+	{BEGIN is_upstream_fieldblock}		
+	<div class="container {$fielddispclass_is_upstream}" data-fieldname="is_upstream">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_is_upstream}">
+				{$label config_layers_info is_upstream}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_is_upstream}
+			</div>
+			<div class="col-md-4" >
+				{$is_upstream_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$is_upstream_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END is_upstream_fieldblock}
+	{BEGIN is_downstream_fieldblock}		
+	<div class="container {$fielddispclass_is_downstream}" data-fieldname="is_downstream">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_is_downstream}">
+				{$label config_layers_info is_downstream}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_is_downstream}
+			</div>
+			<div class="col-md-4" >
+				{$is_downstream_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$is_downstream_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END is_downstream_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container form-horizontal   "> 
+
+
+
+
+{BEGIN container_bbuttons}
+<div {$bbuttons_chiddenattr} data-pageid="{$pageid}" data-container="bbuttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-10 col-md-offset-2"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Search</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reset</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

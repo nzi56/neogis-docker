@@ -1,0 +1,318 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-12 "> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel config_layers_info view}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+
+	<div class="container">
+					{BEGIN description_fieldblock}
+	<div class="{$fielddispclass_description} col-md-6 bs-viewcontrolgroup" data-fieldname="description">
+		<label class="control-label" for="{$labelfor_description}">
+			{$label config_layers_info description}
+		</label>
+		<div class="" >
+			{$description_value}&nbsp;
+		</div>
+	</div>
+{END description_fieldblock}
+					{BEGIN name_fieldblock}
+	<div class="{$fielddispclass_name} col-md-6 bs-viewcontrolgroup" data-fieldname="name">
+		<label class="control-label" for="{$labelfor_name}">
+			{$label config_layers_info name}
+		</label>
+		<div class="" >
+			{$name_value}&nbsp;
+		</div>
+	</div>
+{END name_fieldblock}
+					{BEGIN layer_group_fieldblock}
+	<div class="{$fielddispclass_layer_group} col-md-6 bs-viewcontrolgroup" data-fieldname="layer_group">
+		<label class="control-label" for="{$labelfor_layer_group}">
+			{$label config_layers_info layer_group}
+		</label>
+		<div class="" >
+			{$layer_group_value}&nbsp;
+		</div>
+	</div>
+{END layer_group_fieldblock}
+					{BEGIN is_visible_fieldblock}
+	<div class="{$fielddispclass_is_visible} col-md-6 bs-viewcontrolgroup" data-fieldname="is_visible">
+		<label class="control-label" for="{$labelfor_is_visible}">
+			{$label config_layers_info is_visible}
+		</label>
+		<div class="" >
+			{$is_visible_value}&nbsp;
+		</div>
+	</div>
+{END is_visible_fieldblock}
+					{BEGIN status_fieldblock}
+	<div class="{$fielddispclass_status} col-md-6 bs-viewcontrolgroup" data-fieldname="status">
+		<label class="control-label" for="{$labelfor_status}">
+			{$label config_layers_info status}
+		</label>
+		<div class="" >
+			{$status_value}&nbsp;
+		</div>
+	</div>
+{END status_fieldblock}
+					{BEGIN sl_no_fieldblock}
+	<div class="{$fielddispclass_sl_no} col-md-6 bs-viewcontrolgroup" data-fieldname="sl_no">
+		<label class="control-label" for="{$labelfor_sl_no}">
+			{$label config_layers_info sl_no}
+		</label>
+		<div class="" >
+			{$sl_no_value}&nbsp;
+		</div>
+	</div>
+{END sl_no_fieldblock}
+					{BEGIN sub_group_fieldblock}
+	<div class="{$fielddispclass_sub_group} col-md-6 bs-viewcontrolgroup" data-fieldname="sub_group">
+		<label class="control-label" for="{$labelfor_sub_group}">
+			{$label config_layers_info sub_group}
+		</label>
+		<div class="" >
+			{$sub_group_value}&nbsp;
+		</div>
+	</div>
+{END sub_group_fieldblock}
+					{BEGIN minzoom_fieldblock}
+	<div class="{$fielddispclass_minzoom} col-md-6 bs-viewcontrolgroup" data-fieldname="minzoom">
+		<label class="control-label" for="{$labelfor_minzoom}">
+			{$label config_layers_info minzoom}
+		</label>
+		<div class="" >
+			{$minzoom_value}&nbsp;
+		</div>
+	</div>
+{END minzoom_fieldblock}
+					{BEGIN maxzoom_fieldblock}
+	<div class="{$fielddispclass_maxzoom} col-md-6 bs-viewcontrolgroup" data-fieldname="maxzoom">
+		<label class="control-label" for="{$labelfor_maxzoom}">
+			{$label config_layers_info maxzoom}
+		</label>
+		<div class="" >
+			{$maxzoom_value}&nbsp;
+		</div>
+	</div>
+{END maxzoom_fieldblock}
+					{BEGIN sld_name_fieldblock}
+	<div class="{$fielddispclass_sld_name} col-md-6 bs-viewcontrolgroup" data-fieldname="sld_name">
+		<label class="control-label" for="{$labelfor_sld_name}">
+			{$label config_layers_info sld_name}
+		</label>
+		<div class="" >
+			{$sld_name_value}&nbsp;
+		</div>
+	</div>
+{END sld_name_fieldblock}
+					{BEGIN hls_code_fieldblock}
+	<div class="{$fielddispclass_hls_code} col-md-6 bs-viewcontrolgroup" data-fieldname="hls_code">
+		<label class="control-label" for="{$labelfor_hls_code}">
+			{$label config_layers_info hls_code}
+		</label>
+		<div class="" >
+			{$hls_code_value}&nbsp;
+		</div>
+	</div>
+{END hls_code_fieldblock}
+					{BEGIN is_device_fieldblock}
+	<div class="{$fielddispclass_is_device} col-md-6 bs-viewcontrolgroup" data-fieldname="is_device">
+		<label class="control-label" for="{$labelfor_is_device}">
+			{$label config_layers_info is_device}
+		</label>
+		<div class="" >
+			{$is_device_value}&nbsp;
+		</div>
+	</div>
+{END is_device_fieldblock}
+					{BEGIN is_upstream_fieldblock}
+	<div class="{$fielddispclass_is_upstream} col-md-6 bs-viewcontrolgroup" data-fieldname="is_upstream">
+		<label class="control-label" for="{$labelfor_is_upstream}">
+			{$label config_layers_info is_upstream}
+		</label>
+		<div class="" >
+			{$is_upstream_value}&nbsp;
+		</div>
+	</div>
+{END is_upstream_fieldblock}
+					{BEGIN is_downstream_fieldblock}
+	<div class="{$fielddispclass_is_downstream} col-md-6 bs-viewcontrolgroup" data-fieldname="is_downstream">
+		<label class="control-label" for="{$labelfor_is_downstream}">
+			{$label config_layers_info is_downstream}
+		</label>
+		<div class="" >
+			{$is_downstream_value}&nbsp;
+		</div>
+	</div>
+{END is_downstream_fieldblock}
+	</div>
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-6 "> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>Close window</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="   col-md-4 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>Edit</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

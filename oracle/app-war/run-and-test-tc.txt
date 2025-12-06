@@ -1,0 +1,20 @@
+
+remote: warning: See https://gh.io/lfs for more information.
+remote: warning: File app-war/easyapi.war is 56.28 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+
+git remote -v
+git config --get remote.origin.url
+
+java -jar easyapi.war --server.port=8086 --server.servlet.context-path=/easyapi
+
+ng build --base-href=./ --configuration production --build-optimizer=true
+
+curl -X POST http://localhost:8086/easyapi/api/auth/login -d '{"username":"admin","password":"admin"}' -H "Content-Type: application/json"
+
+curl -H "Authorization: Bearer <token>" "http://localhost:8086/easyapi/api/crud/get-one?tableName=users&primaryKeyColumn=id&primaryKeyValue=1&selectColumns=id,username,email"
+
+curl -H "Authorization: Bearer <token>" "http://localhost:8086/easyapi/api/crud/get-one?tableName=users&primaryKeyColumn=id&primaryKeyValue=1&selectColumns=id,username,email"
+
+curl -X POST http://localhost:8086/easyapi/api/auth/register -d '{"username":"testuser","password":"test123", "email": "test@example.com"}' -H "Content-Type: application/json"
+

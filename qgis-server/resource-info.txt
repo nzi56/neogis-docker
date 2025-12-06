@@ -1,0 +1,82 @@
+grok:
+https://grok.com/share/bGVnYWN5_74e5462d-5cf1-4cf9-8c53-24ae053ecd29
+
+ipconfig | findstr /i "IPv4"
+
+----
+http://localhost:8080/?SERVICE=WMS&REQUEST=GetProjectReport&MAP=/projects/myproject.qgs&REPORT=my-map&FORMAT=pdf
+→ You get one beautiful PDF with one page per feature (exactly like the atlas you see in QGIS Desktop).
+4. Generate only specific pages (one or more features)
+url# One single page (feature with id = 7)
+&REPORT=My Districts Report
+&FORMAT=pdf
+&atlas_pk=7
+
+# Several pages
+&atlas_pk=3;7;12
+
+# All pages (same as no atlas_pk parameter)
+&atlas_pk=*
+5. Quick curl one-liner to download the full report
+Bash
+curl -o districts_report.pdf \
+  "http://localhost:3020/?SERVICE=WMS&REQUEST=GetProjectReport\
+  &MAP=/projects/neogis-map.qgs\
+  &REPORT=my-report\
+  &FORMAT=pdf"
+6. All supported parameters (same as GetPrint + atlas)
+
+curl -o mymap.pdf "http://localhost:3020/?SERVICE=WMS \
+&REQUEST=GetPrint\
+&MAP=/projects/neogis-map.qgs\
+&TEMPLATE=TiledMap\
+&FORMAT=pdf\
+&DPI=300
+
+curl -o mymap.pdf "http://localhost:3020/?SERVICE=WMS&REQUEST=GetPrint&MAP=/projects/neogis-map.qgs&TEMPLATE=TiledMap&FORMAT=pdf&DPI=300
+
+
+
+curl -o districts_report.pdf "http://localhost:3020/?SERVICE=WMS&REQUEST=GetProjectReport&MAP=/projects/neogis-map-01.qgs&REPORT=my-report&FORMAT=pdf"
+
+
+curl -v "http://localhost:3020/ows/?SERVICE=WMS&REQUEST=GetCapabilities&MAP=/projects/neogis-map-01.qgs"
+
+
+docker exec -it qgis-server ls -R /io/data
+
+
+
+
+curl -o districts_report.pdf  "http://localhost:3020/?SERVICE=WMS&REQUEST=GetProjectReport&MAP=/projects/neogis-map-01.qgs&REPORT=my-report&FORMAT=pdf"
+
+
+curl -v -o districts_report.pdf "http://localhost:3020/ows/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetPrint&FORMAT=pdf&MAP=/io/data/neogis-map-01.qgs&TEMPLATE=districts_report&map0:EXTENT=88.9,23.5,91.8,25.5&map0:CRS=EPSG:4326"
+
+
+
+
+
+
+
+
+
+
+curl -o districts_report.pdf 
+"http://localhost:3020/?SERVICE=WMS&REQUEST=GetProjectReport
+&MAP=/projects/neogis-map.qgs
+&REPORT=my-report
+&FORMAT=pdf"
+
+
+
+curl "http://localhost:3020/?SERVICE=WMS&REQUEST=GetProjectReport&MAP=/projects/neogis-map.qgs&REPORT=my-report&FORMAT=pdf"
+
+
+
+
+ParameterExampleMeaningREPORTMy Districts ReportExact name of the reportFORMATpdfOnly pdf is supported right nowatlas_pk5, 1;3;7, *Which feature(s) to renderDPI300Resolution (works since QGIS 3.22+)Any layout parameter you use in GetPrint also works here because the report uses embedded layouts
+That’s it — no extra tools, no Python scripts, no headless QGIS.
+Just design the report once in QGIS Desktop → push the .qgs file into your Docker folder → call GetProjectReport.
+This is the exact same method used in production by Lizmap, QGIS Cloud, and many government agencies.
+Need a ready-made example project with a working report that you can drop in and test immediately? Just say the word and I’ll give you a download link or the full .qgs structure.

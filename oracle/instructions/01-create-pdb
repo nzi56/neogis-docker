@@ -1,0 +1,22 @@
+docker compose up -d 
+
+to bash:
+docker exec -it --user root oracle-free bash
+for directly sqlplus:
+
+docker exec -it oracle-free sqlplus / as sysdba
+
+ALTER SESSION SET CONTAINER = CDB$ROOT;
+CREATE PLUGGABLE DATABASE xepdb1
+   ADMIN USER pdbadmin IDENTIFIED BY pdbadmin
+   FILE_NAME_CONVERT = (
+      '/opt/oracle/oradata/FREE/pdbseed/',
+      '/opt/oracle/oradata/FREE/xepdb1/'
+   );
+   ALTER PLUGGABLE DATABASE xepdb1 OPEN;
+   ALTER PLUGGABLE DATABASE xepdb1 SAVE STATE;
+
+   -- Check it worked
+SELECT name, open_mode, restricted FROM v$pdbs WHERE name = 'XEPDB1';
+
+EXIT;

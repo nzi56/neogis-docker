@@ -1,0 +1,14 @@
+<?php
+$dalTablelayers_group = array();
+$dalTablelayers_group["pkey"] = array("type"=>201,"varname"=>"pkey", "name" => "pkey");
+$dalTablelayers_group["group_code"] = array("type"=>201,"varname"=>"group_code", "name" => "group_code");
+$dalTablelayers_group["group_description"] = array("type"=>201,"varname"=>"group_description", "name" => "group_description");
+$dalTablelayers_group["param_label"] = array("type"=>201,"varname"=>"param_label", "name" => "param_label");
+$dalTablelayers_group["param_view"] = array("type"=>201,"varname"=>"param_view", "name" => "param_view");
+$dalTablelayers_group["default_zoom"] = array("type"=>14,"varname"=>"default_zoom", "name" => "default_zoom");
+$dalTablelayers_group["key_columns"] = array("type"=>201,"varname"=>"key_columns", "name" => "key_columns");
+$dalTablelayers_group["consumers_info_sql"] = array("type"=>201,"varname"=>"consumers_info_sql", "name" => "consumers_info_sql");
+	$dalTablelayers_group["pkey"]["key"]=true;
+
+$dal_info["neogis_at_localhost_config_layers_group"] = &$dalTablelayers_group;
+?>

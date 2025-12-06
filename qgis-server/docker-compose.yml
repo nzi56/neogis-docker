@@ -1,0 +1,23 @@
+services:
+  qgis-server:
+    image: qgis/qgis-server:latest
+    container_name: qgis-server
+    restart: unless-stopped
+
+    ports:
+      - "3020:80"   # host:container
+
+    # Mount your local QGIS projects into /io/data inside the container
+    volumes:
+      - ./projects:/io/data:ro
+
+    environment:
+      # QGIS logging
+      - QGIS_SERVER_LOG_LEVEL=0        # 0 = log everything (debug)
+      - QGIS_SERVER_LOG_STDERR=1       # send logs to stderr (visible in docker logs)
+
+      # Landing page can list projects from this directory (optional but handy)
+      - QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES=/io/data
+
+      # IMPORTANT: do NOT set SKIP_NGINX (we want the internal nginx running)
+      # - SKIP_NGINX=1

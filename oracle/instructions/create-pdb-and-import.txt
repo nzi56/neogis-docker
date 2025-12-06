@@ -1,0 +1,77 @@
+docker compose up -d 
+
+to bash:
+docker exec -it --user root oracle-free bash
+for directly sqlplus:
+
+docker exec -it oracle-free sqlplus / as sysdba
+
+ALTER SESSION SET CONTAINER = CDB$ROOT;
+CREATE PLUGGABLE DATABASE xepdb1
+   ADMIN USER pdbadmin IDENTIFIED BY pdbadmin
+   FILE_NAME_CONVERT = (
+      '/opt/oracle/oradata/FREE/pdbseed/',
+      '/opt/oracle/oradata/FREE/xepdb1/'
+   );
+   ALTER PLUGGABLE DATABASE xepdb1 OPEN;
+   ALTER PLUGGABLE DATABASE xepdb1 SAVE STATE;
+
+   -- Check it worked
+SELECT name, open_mode, restricted FROM v$pdbs WHERE name = 'XEPDB1';
+
+EXIT;
+
+docker exec -it oracle-free sqlplus system/mnzryv@//localhost:1521/xepdb1
+create user sferp identified by sferp;
+grant dba to sferp ;
+SELECT directory_name, directory_path FROM dba_directories WHERE directory_name = 'DATA_PUMP_DIR';
+
+DATA_PUMP_DIR
+/opt/oracle/admin/FREE/dpdump/44DF46037AA502C0E063020016ACBFF2
+Directory path is: /opt/oracle/admin/FREE/dpdump/44DF46037AA502C0E063020016ACBFF2
+( make sure and update for every new container it is different)
+
+from host:
+docker cp "E:\ng-dev\docker-dev\neogis-docker\oracle\sferp_backup.dmp" oracle-free:/opt/oracle/admin/FREE/dpdump/44DF46037AA502C0E063020016ACBFF2/
+( correct host path)
+
+sqlplus system/mnzryv@//localhost:1521/xepdb1
+
+/*
+-- 1. Drop the old default USERS tablespace if it exists and is empty (optional but clean)
+BEGIN
+   FOR rec IN (SELECT file_name FROM dba_data_files WHERE tablespace_name = 'USERS') LOOP
+      EXECUTE IMMEDIATE 'ALTER TABLESPACE USERS OFFLINE';
+      EXECUTE IMMEDIATE 'DROP TABLESPACE USERS INCLUDING CONTENTS AND DATAFILES';
+      EXIT;
+   END LOOP;
+EXCEPTION
+   WHEN OTHERS THEN NULL;   -- ignore if it doesn't exist or has objects
+END;
+/
+*/
+docker exec -it oracle-free sqlplus system/mnzryv@//localhost:1521/xepdb1
+-- 2. Create the standard USERS tablespace (exactly the name = USERS)
+
+CREATE TABLESPACE USERS   DATAFILE '/opt/oracle/oradata/FREE/xepdb1/users01.dbf'   SIZE 100M 
+  AUTOEXTEND ON NEXT 100M MAXSIZE 20G 
+  EXTENT MANAGEMENT LOCAL 
+  SEGMENT SPACE MANAGEMENT AUTO; 
+
+-- 3. Assign it to user sferp
+drop user sferp cascade ;
+create user sferp identified by sferp ;
+grant dba to sferp ;
+
+ALTER USER sferp QUOTA UNLIMITED ON USERS;
+ALTER USER sferp DEFAULT TABLESPACE USERS;
+ALTER USER sferp TEMPORARY TABLESPACE TEMP;
+
+-- 4. Verify everything is correct
+SELECT username, default_tablespace, temporary_tablespace, account_status FROM   dba_users WHERE  username = 'SFERP';
+
+SELECT tablespace_name, file_name, bytes/1024/1024 AS mb, autoextensible, maxbytes/1024/1024 AS max_mb FROM   dba_data_files WHERE  tablespace_name = 'USERS';
+
+to import:
+docker exec -it oracle-free bash
+impdp system/mnzryv@//localhost:1521/xepdb1    directory=DATA_PUMP_DIR    dumpfile=sferp_backup.dmp    logfile=imp.log

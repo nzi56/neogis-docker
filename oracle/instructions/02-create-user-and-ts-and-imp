@@ -1,0 +1,39 @@
+
+docker exec -it oracle-free sqlplus system/mnzryv@//localhost:1521/xepdb1
+
+DATA_PUMP_DIR
+SELECT directory_name, directory_path FROM dba_directories WHERE directory_name = 'DATA_PUMP_DIR';
+
+/opt/oracle/admin/FREE/dpdump/44E0E39BCB25023BE063020016ACA0EC
+Directory path is: /opt/oracle/admin/FREE/dpdump/44E0E39BCB25023BE063020016ACA0EC
+( make sure and update for every new container it is different)
+
+from host:
+docker cp "E:\ng-dev\docker-dev\neogis-docker\oracle\instructions\sferp_backup.dmp" oracle-free:/opt/oracle/admin/FREE/dpdump/44E0E39BCB25023BE063020016ACA0EC/
+( correct host path)
+
+docker exec -it oracle-free sqlplus system/mnzryv@//localhost:1521/xepdb1
+-- 2. Create the standard USERS tablespace (exactly the name = USERS)
+
+CREATE TABLESPACE USERS   DATAFILE '/opt/oracle/oradata/FREE/xepdb1/users01.dbf'   SIZE 100M 
+  AUTOEXTEND ON NEXT 100M MAXSIZE 20G 
+  EXTENT MANAGEMENT LOCAL 
+  SEGMENT SPACE MANAGEMENT AUTO; 
+
+-- 3. Assign it to user sferp
+drop user sferp cascade ;
+create user sferp identified by sferp ;
+grant dba to sferp ;
+
+ALTER USER sferp QUOTA UNLIMITED ON USERS;
+ALTER USER sferp DEFAULT TABLESPACE USERS;
+ALTER USER sferp TEMPORARY TABLESPACE TEMP;
+
+-- 4. Verify everything is correct
+SELECT username, default_tablespace, temporary_tablespace, account_status FROM   dba_users WHERE  username = 'SFERP';
+
+SELECT tablespace_name, file_name, bytes/1024/1024 AS mb, autoextensible, maxbytes/1024/1024 AS max_mb FROM   dba_data_files WHERE  tablespace_name = 'USERS';
+
+to import:
+docker exec -it oracle-free bash
+impdp system/mnzryv@//localhost:1521/xepdb1    directory=DATA_PUMP_DIR    dumpfile=sferp_backup.dmp    logfile=imp.log

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD> 
+<META http-equiv="X-UA-Compatible" content="IE=Edge"> <TITLE>{$pagetitle}</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<LINK href="styles/default.css" rel="stylesheet" type="text/css"> {BEGIN rtlCSS}<LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">{END rtlCSS} {BEGIN styleCSSFiles}<LINK href="{$stylepath}" rel="stylesheet" type="text/css">{END styleCSSFiles} {BEGIN pageCSSFiles}<LINK href="{$pagestylepath}" rel="stylesheet" type="text/css">{END pageCSSFiles}   
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY class="{$stylename} function-add" {$bodyattrs}>{BEGIN body}
+
+{$header} 
+<DIV class="rnr-page">
+<DIV class="rnr-top {$blockclass_top}">
+{BEGIN container_all}
+<DIV class="rnr-c rnr-cv rnr-c-all">
+<DIV class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
+{BEGIN container_add}
+<DIV class="rnr-c rnr-cv rnr-c-add">
+{BEGIN addheader}<DIV class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><SPAN>
+<H1>
+{$pagetitlelabel config_layers_info add}</H1></SPAN></DIV>
+{END addheader}{BEGIN message_block}<DIV class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}">
+<DIV class="rnr-message">
+{$message}</DIV></DIV>
+{END message_block}<DIV class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+{BEGIN container_fields}
+<DIV class="rnr-c rnr-cv rnr-c-fields">
+<DIV class="rnr-brickcontents style1 rnr-b-addfields {$brickclass_addfields}">
+<TABLE class="fieldGrid" bordercolor bgcolor border="1" rules="all" cellspacing="2" cellpadding="1">
+  <TBODY>
+  {BEGIN name_fieldblock}<TR class="{$fielddispclass_name}" data-fieldname="name">
+    <TD class="rnr-label" rowspan="1" colspan="1">{BEGIN name_label}
+      {$label config_layers_info name}{END name_label}</TD>
+    <TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$name_editcontrol}&nbsp;</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$label config_layers_info description}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$description_editcontrol}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$label config_layers_info status}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$status_editcontrol}</TD></TR>
+  {END name_fieldblock}{BEGIN layer_group_fieldblock}<TR class="{$fielddispclass_layer_group}" data-fieldname="layer_group">
+    <TD class="rnr-label" style="white-space: nowrap;" rowspan="1" colspan="1">{BEGIN layer_group_label}
+      {$label config_layers_info layer_group}{END layer_group_label}</TD>
+    <TD class="rnr-control style3" rowspan="1" colspan="3">
+      {$layer_group_editcontrol}&nbsp;&nbsp;</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$label config_layers_info hls_code}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$hls_code_editcontrol}</TD></TR>
+  {END layer_group_fieldblock}{BEGIN sub_group_fieldblock}<TR class="{$fielddispclass_sub_group}" data-fieldname="sub_group">
+    <TD class="rnr-label" style="white-space: nowrap;" rowspan="1" colspan="1">{BEGIN sub_group_label}
+      {$label config_layers_info sub_group}{END sub_group_label}</TD>
+    <TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$sub_group_editcontrol}&nbsp;</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$label config_layers_info sl_no}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$sl_no_editcontrol}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$label config_layers_info is_visible}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$is_visible_editcontrol}</TD></TR>
+  {END sub_group_fieldblock}{BEGIN minzoom_fieldblock}<TR class="{$fielddispclass_minzoom}" data-fieldname="minzoom">
+    <TD class="rnr-label" rowspan="1" colspan="1">{BEGIN minzoom_label}
+      {$label config_layers_info minzoom}{END minzoom_label}</TD>
+    <TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$minzoom_editcontrol}&nbsp;</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$label config_layers_info maxzoom}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$maxzoom_editcontrol}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$label config_layers_info sld_name}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$sld_name_editcontrol}</TD></TR>
+  {END minzoom_fieldblock}{BEGIN is_device_fieldblock}<TR class="{$fielddispclass_is_device}" data-fieldname="is_device">
+    <TD class="rnr-label" rowspan="1" colspan="1">{BEGIN is_device_label}
+      {$label config_layers_info is_device}{END is_device_label}</TD>
+    <TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$is_device_editcontrol}&nbsp;</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$label config_layers_info is_upstream}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$is_upstream_editcontrol}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$label config_layers_info is_downstream}</TD>
+    <TD class="rnr-control style3 runner-cc" rowspan="1" colspan="1">
+      {$is_downstream_editcontrol}</TD></TR>{END is_device_fieldblock}</TBODY></TABLE></DIV>
+{BEGIN addbuttons}<DIV class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}">
+<DIV class="rnr-buttons-left">{BEGIN save_button}<A class="rnr-button main" id="saveButton{$id}" href="#" {$savebutton_attrs}>Save</A> 
+{END save_button}{BEGIN reset_button}<A class="rnr-button" id="resetButton{$id}" href="#">Reset</A> {END reset_button}{BEGIN cancel_button}<A class="rnr-button" id="cancelButton{$id}" href="#">Cancel</A> {END cancel_button}{BEGIN back_button}<A class="rnr-button" id="backButton{$id}" href="#">Back 
+to list</A> {END back_button}{BEGIN backToMenu_button}<A class="rnr-button" id="backToMenuButton{$id}" href="#">Back to menu</A> 
+{END backToMenu_button}</DIV></DIV>{END addbuttons}</DIV>{END container_fields}</DIV></DIV> {END container_add}</DIV></DIV> {END container_all}</DIV>
+<DIV class="rnr-middle">
+<DIV class="rnr-left {$blockclass_left}"></DIV>
+<DIV class="rnr-center {$blockclass_center}"></DIV>
+<DIV class="rnr-right {$blockclass_right}"></DIV></DIV>
+<DIV class="rnr-bottom {$blockclass_bottom}"></DIV></DIV>
+{$footer}{END body} </BODY></HTML>
